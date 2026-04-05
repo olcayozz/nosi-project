@@ -1,13 +1,14 @@
-# NosiAI Landing Page
+# Not Defteri
 
-NosiAI yapay zeka hizmetlerini tanıtan statik landing page uygulaması.
+Web tabanlı, sade ve hızlı bir not defteri uygulaması.
 
 ## Özellikler
 
-- Responsive tasarım (mobil, tablet, masaüstü)
-- Modern UI/UX - Inter font, gradient renkler, animasyonlar
-- Hamburger menü (mobil)
-- Scroll animasyonları
+- Not oluşturma, düzenleme ve silme
+- Otomatik kaydetme (300ms debounce)
+- Tarayıcı localStorage ile kalıcı depolama
+- Notlarda arama
+- Responsive tasarım (mobil uyumlu)
 - Nginx ile servis edilir
 - Docker ile kolay kurulum
 - `/health` endpoint ile sağlık kontrolü
@@ -24,7 +25,7 @@ NosiAI yapay zeka hizmetlerini tanıtan statik landing page uygulaması.
 │   └── nginx.conf      # Nginx konfigürasyonu
 ├── Dockerfile          # Docker imaj tanımı
 ├── docker-compose.yml  # Docker Compose tanımı
-├── script.js           # JavaScript (menü, animasyonlar)
+├── script.js           # JavaScript (not yönetimi, localStorage)
 └── README.md           # Bu dosya
 ```
 
@@ -45,15 +46,10 @@ Uygulama `http://localhost:8080` adresinde çalışacaktır.
 curl http://localhost:8080/health
 ```
 
-## Hizmetler
+## Kullanım
 
-- Özel AI Çözümleri
-- AI Danışmanlık
-- Veri Analitiği
-- Otomasyon
-
-## İletişim
-
-- E-posta: info@nosiai.com
-- Telefon: +90 (212) 555 0123
-- Adres: İstanbul, Türkiye
+- Sol paneldeki **+** butonu ile yeni not oluşturun
+- Not başlığı ve içeriğini düzenleyin — otomatik olarak kaydedilir
+- Notlar arasında arama yapmak için arama kutusunu kullanın
+- Bir notu silmek için **Sil** butonuna tıklayın
+- Notlar tarayıcı localStorage'da saklanır, sayfa yenilendiğinde kaybolmaz
