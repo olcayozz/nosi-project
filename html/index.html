@@ -3,192 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NosiAI - Yapay Zeka Danışmanlık Hizmetleri</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Not Defteri</title>
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
-        <nav class="nav container">
-            <a href="#" class="logo">Nosi<span class="logo-highlight">AI</span></a>
-            <button class="hamburger" aria-label="Menüyü aç/kapat">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-            <ul class="nav-links">
-                <li><a href="#hizmetler">Hizmetler</a></li>
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-                <li><a href="#iletisim" class="nav-cta">Bize Ulaşın</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section class="hero">
-            <div class="container hero-content">
-                <div class="hero-badge">
-                    <span class="hero-badge-dot"></span>
-                    Yapay Zeka Çözümleri
-                </div>
-                <h1>İşinizi Geleceğe<br><span class="gradient-text">Taşıyoruz</span></h1>
-                <p>NosiAI olarak, işletmelerin yapay zeka teknolojilerinden en üst düzeyde faydalanmasını sağlıyoruz. Özel çözümlerimizle verimliliğinizi artırın, rekabet avantajı elde edin.</p>
-                <div class="hero-buttons">
-                    <a href="#iletisim" class="btn btn-primary">Ücretsiz Danışmanlık</a>
-                    <a href="#hizmetler" class="btn btn-secondary">Hizmetleri Keşfet</a>
+    <div class="app">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="app-title">Not Defteri</h1>
+                <button class="btn-new" id="btnNew" aria-label="Yeni not">+</button>
+            </div>
+            <div class="search-box">
+                <input type="text" id="searchInput" placeholder="Notlarda ara...">
+            </div>
+            <ul class="note-list" id="noteList"></ul>
+            <div class="sidebar-footer">
+                <span id="noteCount">0 not</span>
+            </div>
+        </aside>
+        <main class="editor">
+            <div class="editor-header">
+                <input type="text" id="noteTitle" placeholder="Not başlığı..." autocomplete="off">
+                <div class="editor-actions">
+                    <span class="save-status" id="saveStatus"></span>
+                    <button class="btn-delete" id="btnDelete" aria-label="Notu sil">Sil</button>
                 </div>
             </div>
-        </section>
-
-        <section id="hizmetler" class="services">
-            <div class="container">
-                <h2 class="section-title">Hizmetlerimiz</h2>
-                <p class="section-subtitle">İşletmenizin dijital dönüşüm yolculuğunda yanınızdayız. İhtiyaçlarınıza özel çözümler sunuyoruz.</p>
-                <div class="services-grid">
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><span>&#9881;</span></div>
-                        <h3>Özel AI Çözümleri</h3>
-                        <p>İşletmenizin ihtiyaçlarına özel yapay zeka modelleri geliştiriyoruz. Makine öğrenmesi ve derin öğrenme çözümleri ile süreçlerinizi optimize edin.</p>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><span>&#128172;</span></div>
-                        <h3>AI Danışmanlık</h3>
-                        <p>Yapay zeka stratejinizi oluşturmanızda size rehberlik ediyoruz. Teknoloji seçimi, uygulama planlaması ve değişim yönetimi konularında destek sağlıyoruz.</p>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><span>&#128202;</span></div>
-                        <h3>Veri Analitiği</h3>
-                        <p>Büyük veri setlerinizi anlamlandıracak analizler yapıyoruz. Tahmine dayalı modeller ve görselleştirmeler ile veriye dayalı kararlar almanızı sağlıyoruz.</p>
-                    </div>
-                    <div class="service-card animate-on-scroll">
-                        <div class="service-icon"><span>&#128640;</span></div>
-                        <h3>Otomasyon</h3>
-                        <p>Tekrarlayan iş süreçlerinizi yapay zeka ile otomatikleştiriyoruz. İş akışlarınızı hızlandırın, maliyetlerinizi düşürün ve verimliliğinizi artırın.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="hakkimizda" class="about">
-            <div class="container about-content">
-                <div class="about-text">
-                    <h2 class="section-title">Hakkımızda</h2>
-                    <p>NosiAI, yapay zeka teknolojilerinin işletmeler için potansiyelini ortaya çıkarmak amacıyla kurulmuştur.</p>
-                    <p>Deneyimli ekibimiz ile müşterilerimize uçtan uca yapay zeka çözümleri sunuyoruz. Keşif aşamasından uygulamaya, eğitimden destek hizmetlerine kadar her adımda yanınızdayız.</p>
-                    <p>Misyonumuz, yapay zekayı herkes için erişilebilir ve anlaşılır kılmaktır.</p>
-                    <div class="about-features">
-                        <div class="about-feature">
-                            <div class="about-feature-icon">&#10003;</div>
-                            <span>Uzman mühendis kadrosu</span>
-                        </div>
-                        <div class="about-feature">
-                            <div class="about-feature-icon">&#10003;</div>
-                            <span>Uçtan uca proje yönetimi</span>
-                        </div>
-                        <div class="about-feature">
-                            <div class="about-feature-icon">&#10003;</div>
-                            <span>7/24 teknik destek</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-stats">
-                    <div class="stat animate-on-scroll">
-                        <span class="stat-number">50+</span>
-                        <span class="stat-label">Tamamlanan Proje</span>
-                    </div>
-                    <div class="stat animate-on-scroll">
-                        <span class="stat-number">30+</span>
-                        <span class="stat-label">Mutlu Müşteri</span>
-                    </div>
-                    <div class="stat animate-on-scroll">
-                        <span class="stat-number">5+</span>
-                        <span class="stat-label">Yıllık Deneyim</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="iletisim" class="contact">
-            <div class="container">
-                <h2 class="section-title">İletişim</h2>
-                <p class="section-subtitle">Sorularınız için bize ulaşın, en kısa sürede dönüş yapalım.</p>
-                <div class="contact-grid">
-                    <div class="contact-info">
-                        <h3>Bize Ulaşın</h3>
-                        <p>Projeleriniz hakkında konuşmak veya teklif almak için bize ulaşabilirsiniz.</p>
-                        <div class="contact-item">
-                            <div class="contact-icon">&#9993;</div>
-                            <div>
-                                <strong>E-posta</strong>
-                                <p>info@nosiai.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">&#128222;</div>
-                            <div>
-                                <strong>Telefon</strong>
-                                <p>+90 (212) 555 0123</p>
-                            </div>
-                        </div>
-                        <div class="contact-item">
-                            <div class="contact-icon">&#128205;</div>
-                            <div>
-                                <strong>Adres</strong>
-                                <p>Teknoloji Vadisi, İnovasyon Cad. No: 42, İstanbul</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="contact-form">
-                        <h3>Mesaj Gönderin</h3>
-                        <form action="#" method="post">
-                            <div class="form-row">
-                                <div class="form-group">
-                                    <label for="name">Ad Soyad</label>
-                                    <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required>
-                                </div>
-                                <div class="form-group">
-                                    <label for="email">E-posta</label>
-                                    <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="subject">Konu</label>
-                                <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu">
-                            </div>
-                            <div class="form-group">
-                                <label for="message">Mesajınız</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-submit">Mesajı Gönder</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-brand">
-                    <a href="#" class="logo">Nosi<span class="logo-highlight">AI</span></a>
-                    <p>Yapay zeka teknolojileri ile işletmelerin dijital dönüşümüne öncülük ediyoruz.</p>
-                </div>
-                <ul class="footer-links">
-                    <li><a href="#hizmetler">Hizmetler</a></li>
-                    <li><a href="#hakkimizda">Hakkımızda</a></li>
-                    <li><a href="#iletisim">İletişim</a></li>
-                </ul>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 NosiAI. Tüm hakları saklıdır.</p>
-            </div>
-        </div>
-    </footer>
-
+            <textarea id="noteContent" placeholder="Notunuzu buraya yazın..."></textarea>
+        </main>
+    </div>
     <script src="./script.js"></script>
 </body>
 </html>
