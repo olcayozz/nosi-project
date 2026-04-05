@@ -5,7 +5,9 @@ NosiAI yapay zeka hizmetlerini tanıtan statik landing page uygulaması.
 ## Özellikler
 
 - Responsive tasarım (mobil, tablet, masaüstü)
-- Modern ve şık UI
+- Modern UI/UX - Inter font, gradient renkler, animasyonlar
+- Hamburger menü (mobil)
+- Scroll animasyonları
 - Nginx ile servis edilir
 - Docker ile kolay kurulum
 - `/health` endpoint ile sağlık kontrolü
@@ -22,6 +24,7 @@ NosiAI yapay zeka hizmetlerini tanıtan statik landing page uygulaması.
 │   └── nginx.conf      # Nginx konfigürasyonu
 ├── Dockerfile          # Docker imaj tanımı
 ├── docker-compose.yml  # Docker Compose tanımı
+├── script.js           # JavaScript (menü, animasyonlar)
 └── README.md           # Bu dosya
 ```
 
@@ -45,14 +48,12 @@ curl http://localhost:8080/health
 ## Hizmetler
 
 - Özel AI Çözümleri
-- Doğal Dil İşleme
+- AI Danışmanlık
 - Veri Analitiği
 - Otomasyon
-- Görüntü İşleme
-- Danışmanlık
 
 ## İletişim
 
 - E-posta: info@nosiai.com
-- Telefon: +90 (212) 123 45 67
-- Adres: Teknoloji Vadisi, İnovasyon Cad. No: 42, İstanbul
+- Telefon: +90 (212) 555 0123
+- Adres: İstanbul, Türkiye
