@@ -1,355 +1,194 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="NOS Teknoloji - Dijital cozumler, web gelistirme, mobil uygulama ve bulut hizmetleri.">
-  <title>NOS Teknoloji - Dijital Cozumler</title>
-  <link rel="stylesheet" href="./css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NosiAI - Yapay Zeka Danışmanlık Hizmetleri</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="container nav-container">
-      <a href="#" class="logo">NOS<span>Teknoloji</span></a>
-      <button class="nav-toggle" aria-label="Menu" id="navToggle">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#anasayfa">Ana Sayfa</a></li>
-        <li><a href="#hakkimizda">Hakkimizda</a></li>
-        <li><a href="#hizmetler">Hizmetler</a></li>
-        <li><a href="#iletisim">Iletisim</a></li>
-      </ul>
-    </div>
-  </nav>
+    <header class="header">
+        <nav class="nav container">
+            <a href="#" class="logo">Nosi<span class="logo-highlight">AI</span></a>
+            <button class="hamburger" aria-label="Menüyü aç/kapat">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links">
+                <li><a href="#hizmetler">Hizmetler</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+                <li><a href="#iletisim" class="nav-cta">Bize Ulaşın</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <section class="hero" id="anasayfa">
-    <div class="container hero-container">
-      <div class="hero-content">
-        <h1>Dijital Dunyada <span class="highlight">Gelecegi</span> Insa Ediyoruz</h1>
-        <p>Yenilikci teknoloji cozumleriyle isletmenizi bir adim oteye tasiyoruz. Web gelistirme, mobil uygulama ve dijital donusum hizmetlerimizle tanişin.</p>
-        <div class="hero-buttons">
-          <a href="#iletisim" class="btn btn-primary">Bize Ulasin</a>
-          <a href="#hizmetler" class="btn btn-secondary">Hizmetlerimiz</a>
-        </div>
-      </div>
-      <div class="hero-image">
-        <div class="hero-graphic">
-          <div class="floating-card card-1">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-            <span>Web Gelistirme</span>
-          </div>
-          <div class="floating-card card-2">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>
-            <span>Mobil Uygulama</span>
-          </div>
-          <div class="floating-card card-3">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
-            <span>Bulut Cozumleri</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="hero-wave">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path d="M0,64 C360,120 720,0 1080,64 C1260,96 1380,80 1440,64 L1440,120 L0,120 Z" fill="var(--bg-secondary)"/>
-      </svg>
-    </div>
-  </section>
+    <main>
+        <section class="hero">
+            <div class="container hero-content">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    Yapay Zeka Çözümleri
+                </div>
+                <h1>İşinizi Geleceğe<br><span class="gradient-text">Taşıyoruz</span></h1>
+                <p>NosiAI olarak, işletmelerin yapay zeka teknolojilerinden en üst düzeyde faydalanmasını sağlıyoruz. Özel çözümlerimizle verimliliğinizi artırın, rekabet avantajı elde edin.</p>
+                <div class="hero-buttons">
+                    <a href="#iletisim" class="btn btn-primary">Ücretsiz Danışmanlık</a>
+                    <a href="#hizmetler" class="btn btn-secondary">Hizmetleri Keşfet</a>
+                </div>
+            </div>
+        </section>
 
-  <section class="about" id="hakkimizda">
-    <div class="container">
-      <div class="section-header">
-        <h2>Hakkimizda</h2>
-        <p>Teknoloji tutkusuyla hareket eden, musteri odakli bir ekibiz.</p>
-      </div>
-      <div class="about-grid">
-        <div class="about-content">
-          <h3>Neden NOS Teknoloji?</h3>
-          <p>10 yili askin deneyimimizle, isletmelerin dijital donusum yolculuklarinda guvenilir bir partner oluyoruz. Modern teknolojiler, cevik metodolojiler ve surekli inovasyon anlayisimizla projelerinizi hayata geciriyoruz.</p>
-          <div class="stats">
-            <div class="stat-item">
-              <span class="stat-number">150+</span>
-              <span class="stat-label">Tamamlanan Proje</span>
+        <section id="hizmetler" class="services">
+            <div class="container">
+                <h2 class="section-title">Hizmetlerimiz</h2>
+                <p class="section-subtitle">İşletmenizin dijital dönüşüm yolculuğunda yanınızdayız. İhtiyaçlarınıza özel çözümler sunuyoruz.</p>
+                <div class="services-grid">
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><span>&#9881;</span></div>
+                        <h3>Özel AI Çözümleri</h3>
+                        <p>İşletmenizin ihtiyaçlarına özel yapay zeka modelleri geliştiriyoruz. Makine öğrenmesi ve derin öğrenme çözümleri ile süreçlerinizi optimize edin.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><span>&#128172;</span></div>
+                        <h3>AI Danışmanlık</h3>
+                        <p>Yapay zeka stratejinizi oluşturmanızda size rehberlik ediyoruz. Teknoloji seçimi, uygulama planlaması ve değişim yönetimi konularında destek sağlıyoruz.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><span>&#128202;</span></div>
+                        <h3>Veri Analitiği</h3>
+                        <p>Büyük veri setlerinizi anlamlandıracak analizler yapıyoruz. Tahmine dayalı modeller ve görselleştirmeler ile veriye dayalı kararlar almanızı sağlıyoruz.</p>
+                    </div>
+                    <div class="service-card animate-on-scroll">
+                        <div class="service-icon"><span>&#128640;</span></div>
+                        <h3>Otomasyon</h3>
+                        <p>Tekrarlayan iş süreçlerinizi yapay zeka ile otomatikleştiriyoruz. İş akışlarınızı hızlandırın, maliyetlerinizi düşürün ve verimliliğinizi artırın.</p>
+                    </div>
+                </div>
             </div>
-            <div class="stat-item">
-              <span class="stat-number">50+</span>
-              <span class="stat-label">Mutlu Musteri</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">10+</span>
-              <span class="stat-label">Yillik Deneyim</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-number">25+</span>
-              <span class="stat-label">Uzman Ekip</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-features">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-            </div>
-            <h4>Kaliteli Is</h4>
-            <p>En iyi uygulamalar ve modern teknolojilerle yuksek kaliteli cozumler sunuyoruz.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <h4>Zamaninda Teslimat</h4>
-            <p>Projelerinizi belirlenen surelerde, eksiksiz olarak teslim ediyoruz.</p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
-            </div>
-            <h4>Uzman Ekip</h4>
-            <p>Alaninda uzman gelistiriciler ve tasarımcılardan olusan guclu bir ekibimiz var.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+        </section>
 
-  <section class="services" id="hizmetler">
-    <div class="container">
-      <div class="section-header">
-        <h2>Hizmetlerimiz</h2>
-        <p>Isletmenizin ihtiyaclarina ozel kapsamli teknoloji hizmetleri sunuyoruz.</p>
-      </div>
-      <div class="services-grid">
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-          </div>
-          <h3>Web Gelistirme</h3>
-          <p>Modern, hizli ve SEO uyumlu web siteleri ve web uygulamalari gelistiriyoruz. React, Vue, Angular ve backend teknolojileriyle tam kapsamli cozumler.</p>
-          <ul class="service-list">
-            <li>Kurumsal Web Siteleri</li>
-            <li>E-Ticaret Platformlari</li>
-            <li>Web Uygulamalari</li>
-            <li>API Gelistirme</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
-          </div>
-          <h3>Mobil Uygulama</h3>
-          <p>iOS ve Android platformlari icin native ve cross-platform mobil uygulamalar gelistiriyoruz. Kullanici deneyimi odakli yaklasimla.</p>
-          <ul class="service-list">
-            <li>iOS Uygulamalari</li>
-            <li>Android Uygulamalari</li>
-            <li>React Native / Flutter</li>
-            <li>App Store Optimizasyonu</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 00-1-1.73l-7-4a2 2 0 00-2 0l-7 4A2 2 0 003 8v8a2 2 0 001 1.73l7 4a2 2 0 002 0l7-4A2 2 0 0021 16z"/></svg>
-          </div>
-          <h3>Bulut Cozumleri</h3>
-          <p>AWS, Azure ve Google Cloud platformlarinda altyapi tasarimi, migrasyon ve yonetim hizmetleri sunuyoruz.</p>
-          <ul class="service-list">
-            <li>Cloud Migrasyon</li>
-            <li>DevOps & CI/CD</li>
-            <li>Olceklenebilir Altyapi</li>
-            <li>7/24 Izleme & Destek</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-          </div>
-          <h3>Siber Guvenlik</h3>
-          <p>Isletmenizin dijital varliklarini korumak icin kapsamli guvenlik cozumleri ve danismanlik hizmetleri sunuyoruz.</p>
-          <ul class="service-list">
-            <li>Guvenlik Denetimi</li>
-            <li>Penetrasyon Testi</li>
-            <li>Veri Koruma</li>
-            <li>Guvenlik Egitimi</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z"/></svg>
-          </div>
-          <h3>Danismanlik</h3>
-          <p>Dijital donusum sureclerinizde stratejik danismanlik ve teknoloji yol haritasi olusturma hizmetleri sunuyoruz.</p>
-          <ul class="service-list">
-            <li>IT Strateji Danismanligi</li>
-            <li>Dijital Donusum</li>
-            <li>Surec Optimizasyonu</li>
-            <li>Teknoloji Secimi</li>
-          </ul>
-        </div>
-        <div class="service-card">
-          <div class="service-icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z"/></svg>
-          </div>
-          <h3>Bakim & Destek</h3>
-          <p>Mevcut sistemlerinizin surekliligini saglamak icin 7/24 bakim ve teknik destek hizmetleri sunuyoruz.</p>
-          <ul class="service-list">
-            <li>7/24 Teknik Destek</li>
-            <li>Performans Optimizasyonu</li>
-            <li>Guncelleme Yonetimi</li>
-            <li>Yedekleme & Kurtarma</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </section>
+        <section id="hakkimizda" class="about">
+            <div class="container about-content">
+                <div class="about-text">
+                    <h2 class="section-title">Hakkımızda</h2>
+                    <p>NosiAI, yapay zeka teknolojilerinin işletmeler için potansiyelini ortaya çıkarmak amacıyla kurulmuştur.</p>
+                    <p>Deneyimli ekibimiz ile müşterilerimize uçtan uca yapay zeka çözümleri sunuyoruz. Keşif aşamasından uygulamaya, eğitimden destek hizmetlerine kadar her adımda yanınızdayız.</p>
+                    <p>Misyonumuz, yapay zekayı herkes için erişilebilir ve anlaşılır kılmaktır.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="about-feature-icon">&#10003;</div>
+                            <span>Uzman mühendis kadrosu</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">&#10003;</div>
+                            <span>Uçtan uca proje yönetimi</span>
+                        </div>
+                        <div class="about-feature">
+                            <div class="about-feature-icon">&#10003;</div>
+                            <span>7/24 teknik destek</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat animate-on-scroll">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">Tamamlanan Proje</span>
+                    </div>
+                    <div class="stat animate-on-scroll">
+                        <span class="stat-number">30+</span>
+                        <span class="stat-label">Mutlu Müşteri</span>
+                    </div>
+                    <div class="stat animate-on-scroll">
+                        <span class="stat-number">5+</span>
+                        <span class="stat-label">Yıllık Deneyim</span>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-  <section class="cta">
-    <div class="container">
-      <div class="cta-content">
-        <h2>Projenizi Hayata Gecirelim</h2>
-        <p>Dijital donusum yolculugunuzda size yardimci olmak icin haziriz. Hemen bizimle iletisime gecin, ucretsiz kesif gorusmesi yapalim.</p>
-        <a href="#iletisim" class="btn btn-primary btn-large">Ucretsiz Teklif Alin</a>
-      </div>
-    </div>
-  </section>
+        <section id="iletisim" class="contact">
+            <div class="container">
+                <h2 class="section-title">İletişim</h2>
+                <p class="section-subtitle">Sorularınız için bize ulaşın, en kısa sürede dönüş yapalım.</p>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <h3>Bize Ulaşın</h3>
+                        <p>Projeleriniz hakkında konuşmak veya teklif almak için bize ulaşabilirsiniz.</p>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#9993;</div>
+                            <div>
+                                <strong>E-posta</strong>
+                                <p>info@nosiai.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128222;</div>
+                            <div>
+                                <strong>Telefon</strong>
+                                <p>+90 (212) 555 0123</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">&#128205;</div>
+                            <div>
+                                <strong>Adres</strong>
+                                <p>Teknoloji Vadisi, İnovasyon Cad. No: 42, İstanbul</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <h3>Mesaj Gönderin</h3>
+                        <form action="#" method="post">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Ad Soyad</label>
+                                    <input type="text" id="name" name="name" placeholder="Adınız Soyadınız" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">E-posta</label>
+                                    <input type="email" id="email" name="email" placeholder="ornek@email.com" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Konu</label>
+                                <input type="text" id="subject" name="subject" placeholder="Mesajınızın konusu">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Mesajınız</label>
+                                <textarea id="message" name="message" rows="5" placeholder="Mesajınızı buraya yazın..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-submit">Mesajı Gönder</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
-  <section class="contact" id="iletisim">
-    <div class="container">
-      <div class="section-header">
-        <h2>Iletisim</h2>
-        <p>Projeleriniz hakkinda konusmak icin bize ulasin.</p>
-      </div>
-      <div class="contact-grid">
-        <div class="contact-info">
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">Nosi<span class="logo-highlight">AI</span></a>
+                    <p>Yapay zeka teknolojileri ile işletmelerin dijital dönüşümüne öncülük ediyoruz.</p>
+                </div>
+                <ul class="footer-links">
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
             </div>
-            <div class="contact-text">
-              <h4>Adres</h4>
-              <p>Levent Mah. Teknoloji Cad. No:42<br>Sisli, Istanbul 34330</p>
+            <div class="footer-bottom">
+                <p>&copy; 2026 NosiAI. Tüm hakları saklıdır.</p>
             </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6 19.79 19.79 0 01-3.07-8.67A2 2 0 014.11 2h3a2 2 0 012 1.72 12.84 12.84 0 00.7 2.81 2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45 12.84 12.84 0 002.81.7A2 2 0 0122 16.92z"/></svg>
-            </div>
-            <div class="contact-text">
-              <h4>Telefon</h4>
-              <p>+90 (212) 555 0123<br>+90 (532) 555 0456</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            </div>
-            <div class="contact-text">
-              <h4>E-posta</h4>
-              <p>info@nosteknoloji.com<br>destek@nosteknoloji.com</p>
-            </div>
-          </div>
-          <div class="contact-item">
-            <div class="contact-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            </div>
-            <div class="contact-text">
-              <h4>Calisma Saatleri</h4>
-              <p>Pazartesi - Cuma: 09:00 - 18:00<br>Cumartesi: 10:00 - 14:00</p>
-            </div>
-          </div>
-          <div class="social-links">
-            <a href="#" aria-label="LinkedIn">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-            <a href="#" aria-label="Twitter">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-            </a>
-            <a href="#" aria-label="GitHub">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
-            </a>
-            <a href="#" aria-label="Instagram">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
-            </a>
-          </div>
         </div>
-        <div class="contact-form-wrapper">
-          <form class="contact-form" id="contactForm">
-            <div class="form-group">
-              <label for="name">Ad Soyad</label>
-              <input type="text" id="name" name="name" required placeholder="Adiniz ve soyadiniz">
-            </div>
-            <div class="form-group">
-              <label for="email">E-posta</label>
-              <input type="email" id="email" name="email" required placeholder="ornek@email.com">
-            </div>
-            <div class="form-group">
-              <label for="phone">Telefon</label>
-              <input type="tel" id="phone" name="phone" placeholder="+90 (5XX) XXX XX XX">
-            </div>
-            <div class="form-group">
-              <label for="subject">Konu</label>
-              <select id="subject" name="subject" required>
-                <option value="" disabled selected>Konu secin</option>
-                <option value="web">Web Gelistirme</option>
-                <option value="mobile">Mobil Uygulama</option>
-                <option value="cloud">Bulut Cozumleri</option>
-                <option value="security">Siber Guvenlik</option>
-                <option value="consulting">Danismanlik</option>
-                <option value="other">Diger</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="message">Mesajiniz</label>
-              <textarea id="message" name="message" rows="5" required placeholder="Projeniz hakkinda bize bilgi verin..."></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary btn-block">Gonder</button>
-          </form>
-        </div>
-      </div>
-    </div>
-  </section>
+    </footer>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-grid">
-        <div class="footer-col">
-          <a href="#" class="footer-logo">NOS<span>Teknoloji</span></a>
-          <p>Yenilikci teknoloji cozumleriyle isletmelerin dijital donusum yolculuklarinda guvenilir partner.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Hizli Baglantilar</h4>
-          <ul>
-            <li><a href="#anasayfa">Ana Sayfa</a></li>
-            <li><a href="#hakkimizda">Hakkimizda</a></li>
-            <li><a href="#hizmetler">Hizmetler</a></li>
-            <li><a href="#iletisim">Iletisim</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Hizmetler</h4>
-          <ul>
-            <li><a href="#hizmetler">Web Gelistirme</a></li>
-            <li><a href="#hizmetler">Mobil Uygulama</a></li>
-            <li><a href="#hizmetler">Bulut Cozumleri</a></li>
-            <li><a href="#hizmetler">Siber Guvenlik</a></li>
-          </ul>
-        </div>
-        <div class="footer-col">
-          <h4>Iletisim</h4>
-          <ul>
-            <li>+90 (212) 555 0123</li>
-            <li>info@nosteknoloji.com</li>
-            <li>Istanbul, Turkiye</li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 NOS Teknoloji. Tum haklari saklidir.</p>
-      </div>
-    </div>
-  </footer>
-
-  <script src="./script.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>

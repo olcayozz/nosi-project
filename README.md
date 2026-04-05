@@ -1,30 +1,30 @@
-# NOS Teknoloji Landing Page
+# NosiAI Landing Page
 
-NOS Teknoloji sirket tanitim, hizmetler ve iletisim bilgilerini iceren modern statik landing page.
+NosiAI yapay zeka hizmetlerini tanıtan statik landing page uygulaması.
 
-## Ozellikler
+## Özellikler
 
-- Responsive tasarım (mobil, tablet, masaustu)
-- Modern ve şık UI
-- Animasyonlu hero bolumu
-- Iletisim formu
+- Responsive tasarım (mobil, tablet, masaüstü)
+- Modern UI/UX - Inter font, gradient renkler, animasyonlar
+- Hamburger menü (mobil)
+- Scroll animasyonları
 - Nginx ile servis edilir
 - Docker ile kolay kurulum
-- `/health` endpoint ile saglik kontrolu
+- `/health` endpoint ile sağlık kontrolü
 
-## Proje Yapisi
+## Proje Yapısı
 
 ```
 .
-├── index.html          # Ana sayfa
-├── script.js           # JavaScript dosyasi
+├── html/
+│   └── index.html      # Ana sayfa
 ├── css/
-│   └── style.css       # Stil dosyasi
-├── images/             # Resim klasoru
+│   └── style.css       # Stil dosyası
 ├── docker/
 │   └── nginx.conf      # Nginx konfigürasyonu
-├── Dockerfile          # Docker imaj tanimi
-├── docker-compose.yml  # Docker Compose tanimi
+├── Dockerfile          # Docker imaj tanımı
+├── docker-compose.yml  # Docker Compose tanımı
+├── script.js           # JavaScript (menü, animasyonlar)
 └── README.md           # Bu dosya
 ```
 
@@ -37,7 +37,7 @@ docker compose down -v
 docker compose up -d
 ```
 
-Uygulama `http://localhost:8080` adresinde calisacaktir.
+Uygulama `http://localhost:8080` adresinde çalışacaktır.
 
 ### Health Check
 
@@ -45,15 +45,15 @@ Uygulama `http://localhost:8080` adresinde calisacaktir.
 curl http://localhost:8080/health
 ```
 
-## Bolumler
+## Hizmetler
 
-- **Ana Sayfa** - Hero bolumu, animasyonlu kartlar
-- **Hakkimizda** - Sirket bilgileri, istatistikler, ozellikler
-- **Hizmetler** - Web gelistirme, mobil uygulama, bulut cozumleri, siber guvenlik, danismanlik, bakim & destek
-- **Iletisim** - Iletisim bilgileri ve form
+- Özel AI Çözümleri
+- AI Danışmanlık
+- Veri Analitiği
+- Otomasyon
 
-## Iletisim
+## İletişim
 
-- E-posta: info@nosteknoloji.com
+- E-posta: info@nosiai.com
 - Telefon: +90 (212) 555 0123
-- Adres: Levent Mah. Teknoloji Cad. No:42, Sisli, Istanbul 34330
+- Adres: İstanbul, Türkiye
