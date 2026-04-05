@@ -14,9 +14,12 @@ NosiAI yapay zeka hizmetlerini tanıtan statik landing page uygulaması.
 
 ```
 .
-├── index.html          # Ana sayfa
-├── style.css           # Stil dosyası
-├── nginx.conf          # Nginx konfigürasyonu
+├── html/
+│   └── index.html      # Ana sayfa
+├── css/
+│   └── style.css       # Stil dosyası
+├── docker/
+│   └── nginx.conf      # Nginx konfigürasyonu
 ├── Dockerfile          # Docker imaj tanımı
 ├── docker-compose.yml  # Docker Compose tanımı
 └── README.md           # Bu dosya
