@@ -1,45 +1,41 @@
-# NosiAI Landing Page
+# NosiAI - Yapay Zeka Ajansı Landing Page
 
-NosiAI - Yapay Zeka Ajansı tanıtım landing page'i.
-
-## Özellikler
-
-- Modern karanlık tasarım
-- Yapay zeka glowing efektleri
-- Responsive yapı
-- Hizmetler bölümü (6 hizmet kartı)
-- İletişim formu
-- Scroll animasyonları
+Modern ve responsive landing page.
 
 ## Kurulum
 
-### Docker ile
-
 ```bash
+# Docker ile çalıştırma
 docker build -t nosi-ai .
-docker run -d -p 8080:8080 nosi-ai
+docker run -d -p 8080:8080 --name nosi-ai nosi-ai
+
+# Docker Compose ile çalıştırma
+docker-compose up -d
+
+# Dayanıklılık testi
+docker-compose down -v && docker-compose up -d
 ```
 
-Tarayıcıda `http://localhost:8080` adresini ziyaret edin.
+## Erişim
 
-### Yerel Geliştirme
+- Local: http://localhost:8080
+- Health Check: http://localhost:8080/health
 
-Herhangi bir web sunucusu ile açabilirsiniz:
+## Teknoloji
 
-```bash
-# Python
-python -m http.server 8080
+- Pure HTML/CSS/JS
+- No frameworks
+- nginx:alpine
+- Port: 8080
 
-# Node.js
-npx serve .
-```
+## Dosyalar
 
-## Teknolojiler
-
-- HTML5
-- CSS3 (Custom Properties, Animations)
-- Vanilla JavaScript
-- Nginx
+- `index.html` - Ana sayfa
+- `css/style.css` - Stiller
+- `js/main.js` - JavaScript
+- `Dockerfile` - Docker config
+- `nginx.conf` - nginx config
+- `docker-compose.yml` - Compose config
 
 ## Lisans
 

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NosiAI - Yapay Zeka Ajansı</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <nav class="nav">
+                <a href="#" class="logo">NosiAI</a>
+                <ul class="nav-links">
+                    <li><a href="#hakkimizda">Hakkımızda</a></li>
+                    <li><a href="#hizmetler">Hizmetler</a></li>
+                    <li><a href="#iletisim">İletişim</a></li>
+                </ul>
+                <button class="menu-toggle" aria-label="Menüyü aç">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hakkimizda">
+            <div class="container">
+                <div class="hero-content">
+                    <h1 class="hero-title">Geleceği<br><span class="highlight">Yapay Zeka</span> ile Şekillendirin</h1>
+                    <p class="hero-text">NosiAI olarak işinizi dönüştürecek akıllı çözümler sunuyoruz. Makine öğrenmesi, doğal dil işleme ve otomasyon alanlarında uzman ekibimizle yanınızdayız.</p>
+                    <a href="#iletisim" class="btn btn-primary">Proje Teklifi Alın</a>
+                </div>
+                <div class="hero-visual">
+                    <div class="ai-orb"></div>
+                    <div class="ai-orb orb-2"></div>
+                    <div class="ai-orb orb-3"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services" id="hizmetler">
+            <div class="container">
+                <h2 class="section-title">Hizmetlerimiz</h2>
+                <p class="section-subtitle">Yapay zeka çözümleri ile işinizi bir adım öteye taşıyoruz</p>
+                <div class="services-grid">
+                    <div class="service-card">
+                        <div class="service-icon">🤖</div>
+                        <h3>Yapay Zeka Danışmanlığı</h3>
+                        <p>İş süreçlerinize uygun AI stratejileri belirleyerek dijital dönüşümünüzü yönlendiriyoruz.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🧠</div>
+                        <h3>Makine Öğrenmesi</h3>
+                        <p>Özel ML modelleri ile veri analizi, tahmin ve karar destek sistemleri geliştiriyoruz.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">💬</div>
+                        <h3>Doğal Dil İşleme</h3>
+                        <p>Chatbot, sentiment analizi ve metin işleme çözümleri ile müşteri deneyimini iyileştiriyoruz.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">⚡</div>
+                        <h3>İş Akışı Otomasyonu</h3>
+                        <p>Tekrarlayan görevleri otomatikleştirerek operasyonel verimliliğinizi artırıyoruz.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">📊</div>
+                        <h3>Veri Analitiği</h3>
+                        <p>Verilerinizi anlamlı içgörülere dönüştürerek bilgiye dayalı karar alma süreçlerinizi destekliyoruz.</p>
+                    </div>
+                    <div class="service-card">
+                        <div class="service-icon">🔗</div>
+                        <h3>Özel AI Entegrasyonu</h3>
+                        <p>Mevcut sistemlerinize yapay zeka yeteneklerini entegre ederek işinizi güçlendiriyoruz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="150">0</span>
+                        <span class="stat-label">Tamamlanan Proje</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="50">0</span>
+                        <span class="stat-label">Mutlu Müşteri</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="10">0</span>
+                        <span class="stat-label">Yıllık Deneyim</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="25">0</span>
+                        <span class="stat-label">Uzman Ekip Üyesi</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="contact" id="iletisim">
+            <div class="container">
+                <h2 class="section-title">İletişim</h2>
+                <p class="section-subtitle">Projenizi konuşalım, together geleceği kuralım</p>
+                <div class="contact-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Ad Soyad</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">E-posta</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="company">Şirket</label>
+                            <input type="text" id="company" name="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Mesajınız</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="info-item">
+                            <span class="info-icon">📧</span>
+                            <div>
+                                <h4>E-posta</h4>
+                                <p>hello@nosi.com.tr</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📍</span>
+                            <div>
+                                <h4>Konum</h4>
+                                <p>İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                        <div class="info-item">
+                            <span class="info-icon">📱</span>
+                            <div>
+                                <h4>Telefon</h4>
+                                <p>+90 (212) 123 45 67</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <a href="#" class="logo">NosiAI</a>
+                    <p>Yapay zeka ile işinizi geleceğe taşıyoruz.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Hızlı Linkler</h4>
+                    <ul>
+                        <li><a href="#hakkimizda">Hakkımızda</a></li>
+                        <li><a href="#hizmetler">Hizmetler</a></li>
+                        <li><a href="#iletisim">İletişim</a></li>
+                    </ul>
+                </div>
+                <div class="footer-social">
+                    <h4>Sosyal Medya</h4>
+                    <div class="social-links">
+                        <a href="#" aria-label="LinkedIn">LinkedIn</a>
+                        <a href="#" aria-label="Twitter">Twitter</a>
+                        <a href="#" aria-label="Instagram">Instagram</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 NosiAI. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/main.js"></script>
+</body>
+</html>
