@@ -1,152 +1,98 @@
 document.addEventListener('DOMContentLoaded', () => {
-    initMobileMenu();
-    initSmoothScroll();
-    initScrollAnimations();
-    initCounterAnimation();
-    initFormValidation();
+    mobileMenu();
+    scrollAnimations();
+    counterAnimation();
+    contactForm();
 });
 
-function initMobileMenu() {
-    const toggle = document.querySelector('.mobile-toggle');
-    const nav = document.querySelector('.nav');
-    const navLinks = document.querySelectorAll('.nav-link');
+function mobileMenu() {
+    const menuToggle = document.getElementById('mobile-menu');
+    const navLinks = document.querySelector('.nav-links');
 
-    if (!toggle || !nav) return;
-
-    toggle.addEventListener('click', () => {
-        toggle.classList.toggle('active');
-        nav.classList.toggle('active');
+    menuToggle.addEventListener('click', () => {
+        navLinks.classList.toggle('active');
     });
 
-    navLinks.forEach(link => {
+    document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', () => {
-            toggle.classList.remove('active');
-            nav.classList.remove('active');
+            navLinks.classList.remove('active');
         });
     });
 }
 
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function(e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const headerHeight = document.querySelector('.header').offsetHeight;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
-
-function initScrollAnimations() {
+function scrollAnimations() {
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+        entries.forEach((entry, index) => {
             if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
+                setTimeout(() => {
+                    entry.target.classList.add('visible');
+                }, index * 100);
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.service-card, .stat-item, .info-item').forEach(el => {
-        el.classList.add('fade-in');
-        observer.observe(el);
+    document.querySelectorAll('.service-card').forEach(card => {
+        observer.observe(card);
     });
 }
 
-function initCounterAnimation() {
+function counterAnimation() {
     const counters = document.querySelectorAll('.stat-number');
     let animated = false;
 
-    const animateCounters = () => {
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000;
-            const step = target / (duration / 16);
-            let current = 0;
-
-            const updateCounter = () => {
-                current += step;
-                if (current < target) {
-                    counter.textContent = Math.floor(current);
-                    requestAnimationFrame(updateCounter);
-                } else {
-                    counter.textContent = target;
-                }
-            };
-
-            updateCounter();
+    const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !animated) {
+                animated = true;
+                counters.forEach(counter => {
+                    const target = parseInt(counter.getAttribute('data-count'));
+                    animateCounter(counter, target);
+                });
+            }
         });
-    };
-
-    const statsSection = document.querySelector('.stats');
-    if (!statsSection) return;
-
-    const observer = new IntersectionObserver((entries) => {
-        if (entries[0].isIntersecting && !animated) {
-            animated = true;
-            animateCounters();
-        }
     }, { threshold: 0.5 });
 
-    observer.observe(statsSection);
+    const aboutSection = document.querySelector('.about');
+    if (aboutSection) {
+        counterObserver.observe(aboutSection);
+    }
 }
 
-function initFormValidation() {
-    const form = document.getElementById('contactForm');
-    if (!form) return;
+function animateCounter(element, target) {
+    let current = 0;
+    const increment = target / 50;
+    const duration = 2000;
+    const stepTime = duration / 50;
+
+    const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+        } else {
+            element.textContent = Math.floor(current);
+        }
+    }, stepTime);
+}
+
+function contactForm() {
+    const form = document.getElementById('contact-form');
 
     form.addEventListener('submit', (e) => {
         e.preventDefault();
 
-        let isValid = true;
-        const formGroups = form.querySelectorAll('.form-group');
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
 
-        formGroups.forEach(group => {
-            const input = group.querySelector('input, textarea');
-            if (input && input.hasAttribute('required')) {
-                if (!input.value.trim()) {
-                    group.classList.add('has-error');
-                    input.classList.add('error');
-                    isValid = false;
-                } else if (input.type === 'email' && !isValidEmail(input.value)) {
-                    group.classList.add('has-error');
-                    input.classList.add('error');
-                    isValid = false;
-                } else {
-                    group.classList.remove('has-error');
-                    input.classList.remove('error');
-                }
-            }
-        });
+        console.log('Form Submitted:', { name, email, message });
 
-        if (isValid) {
-            const formData = new FormData(form);
-            const data = Object.fromEntries(formData.entries());
-            console.log('Form submitted:', data);
-            alert('Mesajınız başarıyla gönderildi!');
-            form.reset();
-        }
+        alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
+        form.reset();
     });
-
-    form.querySelectorAll('input, textarea').forEach(input => {
-        input.addEventListener('input', () => {
-            const group = input.closest('.form-group');
-            group.classList.remove('has-error');
-            input.classList.remove('error');
-        });
-    });
-}
-
-function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
 }
