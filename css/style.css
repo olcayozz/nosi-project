@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'DM Sans', 'Outfit', 'Segoe UI', system-ui, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
