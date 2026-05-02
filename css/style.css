@@ -60,7 +60,7 @@ body {
     color: var(--text-light);
 }
 
-.logo span {
+.logo .logo-ai {
     background: var(--gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
