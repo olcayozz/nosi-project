@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NosiAI - Yapay Zeka Ajansı</title>
+    <title>Nosi - Agentic IT Solutions</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -15,8 +15,9 @@
             <div class="logo">Nosi<span>AI</span></div>
             <ul class="nav-links">
                 <li><a href="#home">Ana Sayfa</a></li>
-                <li><a href="#about">Hakkımızda</a></li>
+                <li><a href="#how-it-works">Nasıl Çalışır</a></li>
                 <li><a href="#services">Hizmetler</a></li>
+                <li><a href="#team">Ekip</a></li>
                 <li><a href="#contact">İletişim</a></li>
             </ul>
             <div class="menu-toggle" id="mobile-menu">
@@ -30,34 +31,55 @@
     <section id="home" class="hero">
         <div class="hero-bg"></div>
         <div class="hero-content">
-            <h1 class="hero-title">Yapay Zeka ile<br>Geleceği Şekillendirin</h1>
-            <p class="hero-subtitle">İşinizi dönüştüren akıllı çözümler ve yenilikçi AI projeleri</p>
-            <a href="#contact" class="btn btn-primary">Bize Ulaşın</a>
+            <div class="hero-badge">Self-Hosted Agentic AI</div>
+            <h1 class="hero-title">Yazılım Ekipinizi<br><span>AI Agent'larla</span> Değiştirin</h1>
+            <p class="hero-subtitle">Müşteri odaklı yazılım geliştirme artık çok kolay. Telegram'da yazışın, otomatik olarak staging'e deploy edilen yazılımlarınızı alın.</p>
+            <div class="hero-cta">
+                <a href="#contact" class="btn btn-primary">Demo İste</a>
+                <a href="#how-it-works" class="btn btn-secondary">Nasıl Çalışır</a>
+            </div>
+            <div class="hero-features">
+                <div class="feature-pill">
+                    <span class="pill-icon">🔒</span>
+                    <span>Local LLM'ler</span>
+                </div>
+                <div class="feature-pill">
+                    <span class="pill-icon">💬</span>
+                    <span>Telegram Entegrasyonu</span>
+                </div>
+                <div class="feature-pill">
+                    <span class="pill-icon">🚀</span>
+                    <span>Otomatik Deploy</span>
+                </div>
+            </div>
         </div>
         <div class="hero-glow"></div>
     </section>
 
-    <section id="about" class="about">
+    <section id="how-it-works" class="how-it-works">
         <div class="container">
-            <h2 class="section-title">Hakkımızda</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>NosiAI olarak yapay zeka teknolojilerini işinize entegre ederek verimliliğinizi artırıyoruz. Deneyimli ekibimiz ile machine learning, natural language processing ve computer vision alanlarında uzmanlaşıyoruz.</p>
-                    <p>Müşterilerimize özel AI çözümleri sunarak dijital dönüşümlerini tamamlamalarına yardımcı oluyoruz.</p>
+            <h2 class="section-title">Nasıl Çalışır?</h2>
+            <p class="section-subtitle">Geleneksel yazılım ekibi yerine, Telegram'da yazıştığınız AI agent ekibiniz var</p>
+            <div class="steps-container">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <div class="step-icon">💬</div>
+                    <h3>Telegram'da İletişim</h3>
+                    <p>Projenizi Telegram'daki agent ekibinize anlatın. CEO, Architect, PM, Worker ve QA agentları taleplerinizi anlar ve uygular.</p>
                 </div>
-                <div class="about-stats">
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="50">0</span>
-                        <span class="stat-label">+ Proje</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="30">0</span>
-                        <span class="stat-label">+ Müşteri</span>
-                    </div>
-                    <div class="stat-item">
-                        <span class="stat-number" data-count="5">0</span>
-                        <span class="stat-label">Yıl Deneyim</span>
-                    </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <div class="step-icon">⚙️</div>
+                    <h3>Otomatik Geliştirme</h3>
+                    <p>Agentlar kod yazar, testleri çalıştırır ve uçtan uca yazılım geliştirir. Siz sadece sonucu beklersiniz.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <div class="step-icon">📦</div>
+                    <h3>Otomatik Deploy</h3>
+                    <p>QA onayından sonra yazılımınız otomatik olarak staging ortamına deploy edilir. Canlıya geçmeden önce test edin.</p>
                 </div>
             </div>
         </div>
@@ -68,34 +90,73 @@
             <h2 class="section-title">Hizmetlerimiz</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">🤖</div>
-                    <h3>AI Danışmanlık</h3>
-                    <p>İşiniz için en uygun yapay zeka stratejilerini belirliyor ve uygulama yol haritası çiziyoruz.</p>
+                    <div class="service-icon">👥</div>
+                    <h3>Özel Agent Ekibi Kurulumu</h3>
+                    <p>Sizin için özelleştirilmiş agent ekibi (CEO, Architect, PM, Worker, QA) oluşturuyoruz. Kendi yazılım departmanınızı AI ile değiştirin.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🧠</div>
-                    <h3>Machine Learning</h3>
-                    <p>Özel makine öğrenmesi modelleri geliştirerek verilerinizden değer üretiyoruz.</p>
+                    <div class="service-icon">✨</div>
+                    <h3>Vibe-Coded Uygulama</h3>
+                    <p>Modern, trend ve kullanıcı dostu uygulamalar. Agentlarınız fikirlerinizi hayata geçirir, vibe-coding yaklaşımıyla trend tasarımlar sunar.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💬</div>
-                    <h3>NLP Çözümleri</h3>
-                    <p>Doğal dil işleme teknolojileri ile chatbot, sentiment analizi ve metin sınıflandırma.</p>
+                    <div class="service-icon">🔧</div>
+                    <h3>MCP Tool Entegrasyonu</h3>
+                    <p>Model Context Protocol ile agentlarınızın yeteneklerini genişletin. Harici sistemlerle entegrasyon, API bağlantıları ve otomasyon.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">👁️</div>
-                    <h3>Computer Vision</h3>
-                    <p>Görüntü tanıma, nesne algılama ve video analiz çözümleri sunuyoruz.</p>
+                    <div class="service-icon">🖥️</div>
+                    <h3>Self-Hosted LLM Altyapısı</h3>
+                    <p>Kendi veri merkezinizde veya bulut sunucunuzda çalışan local LLM altyapısı. Verileriniz sizinle kalır, gizlilik ve güvenlik.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">📊</div>
-                    <h3>Veri Analizi</h3>
-                    <p>Verilerinizi analiz ederek işiniz için actionable insight'lar sağlıyoruz.</p>
+                    <div class="service-icon">🔄</div>
+                    <h3>CI/CD Pipeline</h3>
+                    <p>Otomatik build, test ve deployment süreçleri. Agentlar kod yazdıkça CI/CD pipeline çalışır, staging'e otomatik deploy eder.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">⚡</div>
-                    <h3>Otomasyon</h3>
-                    <p>AI destekli iş süreçlerinizi otomatize ederek zamandan tasarruf sağlıyoruz.</p>
+                    <div class="service-icon">🧪</div>
+                    <h3>QA Otomasyonu</h3>
+                    <p>QA agent otomatik testler yapar, bugları bulur ve düzeltmeler önerir. Manuel test yerine otomatik kalite kontrol.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="team" class="team">
+        <div class="container">
+            <h2 class="section-title">Agent Ekibiniz</h2>
+            <p class="section-subtitle">Telegram'da yazıştığınız her agent spesifik bir rol üstlenir</p>
+            <div class="team-grid">
+                <div class="agent-card">
+                    <div class="agent-avatar">👔</div>
+                    <h3>CEO Agent</h3>
+                    <p class="agent-role">Proje Yöneticisi</p>
+                    <p class="agent-desc">Müşteri taleplerini anlar, öncelikleri belirler ve ekibi yönlendirir. Stratejik kararlar alır.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">🏗️</div>
+                    <h3>Architect Agent</h3>
+                    <p class="agent-role">Teknik Lider</p>
+                    <p class="agent-desc">Sistem tasarımı yapar, teknoloji seçimlerini belirler ve mimari kararları verir.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">📋</div>
+                    <h3>PM Agent</h3>
+                    <p class="agent-role">Proje Yönetimi</p>
+                    <p class="agent-desc">Sprint planlaması yapar, task'ları takip eder ve deadline'ları yönetir.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">💻</div>
+                    <h3>Worker Agent</h3>
+                    <p class="agent-role">Geliştirici</p>
+                    <p class="agent-desc">Kod yazar, feature'ları implement eder ve technical debt'i yönetir.</p>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-avatar">🔍</div>
+                    <h3>QA Agent</h3>
+                    <p class="agent-role">Kalite Kontrol</p>
+                    <p class="agent-desc">Test yazar, bug bulur ve kalite standartlarını kontrol eder.</p>
                 </div>
             </div>
         </div>
@@ -103,38 +164,57 @@
 
     <section id="contact" class="contact">
         <div class="container">
-            <h2 class="section-title">İletişim</h2>
+            <h2 class="section-title">Birlikte Çalışalım</h2>
             <div class="contact-wrapper">
                 <div class="contact-info">
-                    <h3>Bizimle İletişime Geçin</h3>
-                    <p>Projeniz hakkında konuşmak için her zaman hazırız.</p>
+                    <h3>Agent Ekip Kurulumu</h3>
+                    <p>Küçük ve orta ölçekli işletmeniz için özel agent ekibi kurmak ister misiniz? Geleneksel yazılım ekibi yerine self-hosted AI alternatifini deneyin.</p>
                     <div class="contact-details">
                         <div class="contact-item">
-                            <span class="contact-label">Email:</span>
-                            <span>hello@nosi.com.tr</span>
+                            <span class="contact-icon">💬</span>
+                            <div>
+                                <span class="contact-label">Telegram</span>
+                                <span>@nosi_ai</span>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-label">Telefon:</span>
-                            <span>+90 212 123 45 67</span>
+                            <span class="contact-icon">📧</span>
+                            <div>
+                                <span class="contact-label">Email</span>
+                                <span>hello@nosi.ai</span>
+                            </div>
                         </div>
                         <div class="contact-item">
-                            <span class="contact-label">Adres:</span>
-                            <span>İstanbul, Türkiye</span>
+                            <span class="contact-icon">🌐</span>
+                            <div>
+                                <span class="contact-label">Web</span>
+                                <span>nosi.ai</span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <form class="contact-form" id="contact-form">
                     <div class="form-group">
-                        <label for="name">Adınız</label>
-                        <input type="text" id="name" name="name" required>
+                        <label for="company">Şirket Adı</label>
+                        <input type="text" id="company" name="company" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
                         <input type="email" id="email" name="email" required>
                     </div>
                     <div class="form-group">
+                        <label for="interest">İlgilendiğiniz Hizmet</label>
+                        <select id="interest" name="interest">
+                            <option value="agent-team">Özel Agent Ekibi Kurulumu</option>
+                            <option value="vibe-coding">Vibe-Coded Uygulama</option>
+                            <option value="mcp-integration">MCP Tool Entegrasyonu</option>
+                            <option value="llm-infrastructure">Self-Hosted LLM Altyapısı</option>
+                            <option value="other">Diğer</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="message">Mesajınız</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <textarea id="message" name="message" rows="4" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">Gönder</button>
                 </form>
@@ -144,7 +224,11 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2026 NosiAI. Tüm hakları saklıdır.</p>
+            <div class="footer-content">
+                <div class="footer-logo">Nosi<span>AI</span></div>
+                <p>Agentic IT Solutions - Self-Hosted AI ile Yazılım Geliştirme</p>
+            </div>
+            <p class="footer-copy">&copy; 2026 NosiAI. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
