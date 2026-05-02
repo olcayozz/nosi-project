@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     mobileMenu();
     scrollAnimations();
-    counterAnimation();
     contactForm();
 });
 
@@ -41,45 +40,6 @@ function scrollAnimations() {
     });
 }
 
-function counterAnimation() {
-    const counters = document.querySelectorAll('.stat-number');
-    let animated = false;
-
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !animated) {
-                animated = true;
-                counters.forEach(counter => {
-                    const target = parseInt(counter.getAttribute('data-count'));
-                    animateCounter(counter, target);
-                });
-            }
-        });
-    }, { threshold: 0.5 });
-
-    const aboutSection = document.querySelector('.about');
-    if (aboutSection) {
-        counterObserver.observe(aboutSection);
-    }
-}
-
-function animateCounter(element, target) {
-    let current = 0;
-    const increment = target / 50;
-    const duration = 2000;
-    const stepTime = duration / 50;
-
-    const timer = setInterval(() => {
-        current += increment;
-        if (current >= target) {
-            element.textContent = target + '+';
-            clearInterval(timer);
-        } else {
-            element.textContent = Math.floor(current);
-        }
-    }, stepTime);
-}
-
 function contactForm() {
     const form = document.getElementById('contact-form');
 
@@ -87,12 +47,13 @@ function contactForm() {
         e.preventDefault();
 
         const name = document.getElementById('name').value;
+        const company = document.getElementById('company').value;
         const email = document.getElementById('email').value;
         const message = document.getElementById('message').value;
 
-        console.log('Form Submitted:', { name, email, message });
+        console.log('Form Submitted:', { name, company, email, message });
 
-        alert('Mesajınız gönderildi! En kısa sürede size dönüş yapacağız.');
+        alert('Mesajınız gönderildi! En kısa sürede Telegram üzerinden size dönüş yapacağız.');
         form.reset();
     });
 }

@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'DM Sans', 'Segoe UI', system-ui, sans-serif;
     background-color: var(--bg-dark);
     color: var(--text-light);
     line-height: 1.6;
@@ -58,6 +58,7 @@ body {
     font-size: 1.8rem;
     font-weight: 700;
     color: var(--text-light);
+    font-family: 'Outfit', sans-serif;
 }
 
 .logo span {
@@ -141,6 +142,19 @@ body {
     z-index: 1;
     text-align: center;
     padding: 2rem;
+    max-width: 800px;
+}
+
+.hero-badge {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    background: rgba(0, 212, 255, 0.1);
+    border: 1px solid var(--primary);
+    border-radius: 50px;
+    font-size: 0.9rem;
+    color: var(--primary);
+    margin-bottom: 1.5rem;
+    animation: fadeInUp 1s ease-out;
 }
 
 .hero-title {
@@ -148,6 +162,7 @@ body {
     font-weight: 800;
     line-height: 1.2;
     margin-bottom: 1.5rem;
+    font-family: 'Outfit', sans-serif;
     animation: fadeInUp 1s ease-out;
 }
 
@@ -163,6 +178,9 @@ body {
     color: var(--text-muted);
     margin-bottom: 2rem;
     animation: fadeInUp 1s ease-out 0.2s both;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 @keyframes fadeInUp {
@@ -204,6 +222,7 @@ body {
     text-align: center;
     margin-bottom: 3rem;
     position: relative;
+    font-family: 'Outfit', sans-serif;
 }
 
 .section-title::after {
@@ -216,51 +235,52 @@ body {
     border-radius: 2px;
 }
 
-.about {
+.how-it-works {
     padding: 6rem 0;
     background: var(--bg-dark);
 }
 
-.about-content {
+.steps-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 4rem;
-    align-items: center;
-}
-
-.about-text p {
-    color: var(--text-muted);
-    margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-}
-
-.about-stats {
-    display: flex;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
 }
 
-.stat-item {
+.step-card {
     text-align: center;
-    padding: 1.5rem;
+    padding: 2rem;
     background: var(--bg-card);
-    border-radius: 16px;
     border: 1px solid var(--border-color);
-    flex: 1;
+    border-radius: 20px;
+    transition: all 0.3s ease;
 }
 
-.stat-number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 700;
+.step-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 20px 60px rgba(0, 212, 255, 0.15);
+}
+
+.step-number {
+    font-size: 3rem;
+    font-weight: 800;
     background: var(--gradient-1);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
 }
 
-.stat-label {
+.step-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+    color: var(--text-light);
+}
+
+.step-card p {
     color: var(--text-muted);
-    font-size: 0.9rem;
+    font-size: 0.95rem;
 }
 
 .services {
@@ -270,7 +290,7 @@ body {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
 }
 
@@ -325,6 +345,7 @@ body {
 .contact-info h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    font-family: 'Outfit', sans-serif;
 }
 
 .contact-info > p {
@@ -350,7 +371,7 @@ body {
 .contact-label {
     color: var(--primary);
     font-weight: 600;
-    min-width: 60px;
+    min-width: 80px;
 }
 
 .contact-form {
@@ -393,6 +414,26 @@ body {
     min-height: 120px;
 }
 
+.cta {
+    padding: 6rem 0;
+    background: linear-gradient(180deg, var(--bg-dark) 0%, rgba(0, 212, 255, 0.05) 100%);
+    text-align: center;
+}
+
+.cta h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-family: 'Outfit', sans-serif;
+}
+
+.cta p {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .footer {
     padding: 2rem 0;
     background: var(--bg-card);
@@ -402,10 +443,11 @@ body {
 
 .footer p {
     color: var(--text-muted);
+    font-size: 0.9rem;
 }
 
 @media (max-width: 1024px) {
-    .services-grid {
+    .steps-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -436,21 +478,28 @@ body {
         font-size: 2.5rem;
     }
 
-    .about-content,
-    .contact-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
+    .hero-subtitle {
+        font-size: 1rem;
     }
 
-    .about-stats {
-        flex-direction: column;
+    .steps-grid {
+        grid-template-columns: 1fr;
     }
 
     .services-grid {
         grid-template-columns: 1fr;
     }
 
+    .contact-wrapper {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
     .section-title {
         font-size: 2rem;
+    }
+
+    .cta h2 {
+        font-size: 1.75rem;
     }
 }
