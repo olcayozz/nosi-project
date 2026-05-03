@@ -1,110 +1,55 @@
-document.addEventListener('DOMContentLoaded', () => {
-    initNavbar();
-    initScrollAnimations();
-    initContactForm();
-    initSmoothScroll();
-});
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+    const navLinks = document.querySelectorAll('.nav-link');
 
-function initNavbar() {
-    const navbar = document.querySelector('.navbar');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 50) {
-            navbar.style.background = 'rgba(10, 10, 15, 0.95)';
-            navbar.style.boxShadow = '0 4px 30px rgba(0, 0, 0, 0.3)';
-        } else {
-            navbar.style.background = 'rgba(10, 10, 15, 0.8)';
-            navbar.style.boxShadow = 'none';
-        }
-
-        lastScroll = currentScroll;
+    hamburger.addEventListener('click', function() {
+        nav.classList.toggle('active');
+        hamburger.classList.toggle('active');
     });
 
-    const mobileBtn = document.querySelector('.mobile-menu-btn');
-    const navLinks = document.querySelector('.nav-links');
-
-    if (mobileBtn) {
-        mobileBtn.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-            mobileBtn.classList.toggle('active');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function() {
+            nav.classList.remove('active');
+            hamburger.classList.remove('active');
         });
-    }
-}
+    });
 
-function initScrollAnimations() {
+    document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
+        anchor.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href !== '#') {
+                e.preventDefault();
+                const target = document.querySelector(href);
+                if (target) {
+                    const headerHeight = document.querySelector('.header').offsetHeight;
+                    const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
+    });
+
     const observerOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        threshold: 0.1
     };
 
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
+    const observer = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
             if (entry.isIntersecting) {
-                entry.target.classList.add('animate-in');
-                observer.unobserve(entry.target);
+                entry.target.style.opacity = '1';
+                entry.target.style.transform = 'translateY(0)';
             }
         });
     }, observerOptions);
 
-    document.querySelectorAll('.service-card, .process-step, .about-visual').forEach(el => {
+    document.querySelectorAll('.service-card, .process-step').forEach(function(el) {
         el.style.opacity = '0';
-        el.style.transform = 'translateY(30px)';
+        el.style.transform = 'translateY(20px)';
         el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
-
-    setTimeout(() => {
-        document.querySelectorAll('.animate-in').forEach(el => {
-            el.style.opacity = '1';
-            el.style.transform = 'translateY(0)';
-        });
-    }, 100);
-}
-
-function initContactForm() {
-    const form = document.getElementById('contactForm');
-
-    if (form) {
-        form.addEventListener('submit', (e) => {
-            e.preventDefault();
-
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-
-            submitBtn.textContent = 'Gönderiliyor...';
-            submitBtn.disabled = true;
-
-            setTimeout(() => {
-                submitBtn.textContent = 'Gönderildi!';
-                submitBtn.style.background = 'linear-gradient(135deg, #22c55e 0%, #16a34a 100%)';
-
-                setTimeout(() => {
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                    submitBtn.style.background = '';
-                    form.reset();
-                }, 2000);
-            }, 1500);
-        });
-    }
-}
-
-function initSmoothScroll() {
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                const offset = 80;
-                const targetPosition = target.getBoundingClientRect().top + window.pageYOffset - offset;
-                window.scrollTo({
-                    top: targetPosition,
-                    behavior: 'smooth'
-                });
-            }
-        });
-    });
-}
+});

@@ -5,6 +5,7 @@
 ### Static Components
 - **Header**: Logo, navigation links, mobile hamburger menu
 - **Hero Section**: Headline, subheadline, CTA button
+- **Company Profile**: Nosi branding and description
 - **Services Section**: 4 service cards with icons and descriptions
 - **Process Section**: Visual workflow diagram
 - **Footer**: Contact info, social links, copyright
@@ -28,17 +29,18 @@
 ```
 nosi-project/
 ├── index.html          # Main HTML file
-├── css/
-│   └── style.css      # All styles
-├── js/
-│   └── main.js       # Interactive functionality
-├── Dockerfile         # Container configuration
-└── README.md         # Setup instructions
+├── style.css           # All styles (root level)
+├── script.js           # Interactive functionality (root level)
+├── Dockerfile          # Container configuration
+├── docker-compose.yml  # Compose configuration
+├── README.md           # Setup instructions
+└── health/
+    └── index.html      # Health check file
 ```
 
 ### Relative Paths
-- CSS: `./css/style.css`
-- JS: `./js/main.js`
+- CSS: `./style.css`
+- JS: `./script.js`
 
 ## Deployment
 
@@ -67,3 +69,30 @@ services:
       timeout: 10s
       retries: 3
 ```
+
+### Staging Deployment
+- **URL**: https://test.ozyilmaz.xyz/nosi
+- Auto-deploy on push to main/development branch
+
+## Implementation Notes
+
+### HTML Structure
+- Semantic HTML5 sections: header, nav, section, footer
+- IDs for smooth scroll navigation: #services, #process, #contact
+
+### CSS Requirements
+- CSS variables for colors and spacing
+- Media queries for responsive design
+- Flexbox/Grid for layout
+
+### JS Functionality
+- Mobile hamburger menu toggle
+- Smooth scroll for navigation links
+- CTA button interaction
+
+### QA Verification
+- Page loads at staging URL
+- All sections visible
+- Responsive on mobile/tablet/desktop
+- Navigation smooth scroll works
+- CTA clickable
