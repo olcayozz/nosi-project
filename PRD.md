@@ -1,138 +1,80 @@
-# PRD - NosiAI Landing Page
+# Nosi AI - Product Requirements Document
 
-## 1. Project Overview
+## Problem Statement
 
-- **Project Name**: nosi.com.tr Landing Page
-- **Project Type**: Corporate Website / Landing Page
-- **Core Functionality**: Showcase NosiAI as an AI agency, present services, and capture visitor inquiries
-- **Target Users**: Businesses seeking AI solutions, potential clients, partners
+SMBs struggle to access affordable, flexible software development. Traditional dev teams are expensive, slow to scale, and require ongoing management. There's a gap for businesses that want the power of AI-driven development but need human oversight and structured agent workflows—not just raw LLM chat interfaces.
 
----
+**Core Problem:** SMBs need agentic AI teams that combine LLM capabilities with structured roles (CEO, Architect, PM, Worker, QA), accessible via familiar channels like Telegram, without the overhead of traditional development agencies.
 
-## 2. UI/UX Specification
+## User Stories
 
-### Layout Structure
+### SMB Founders / CTOs
+- "I want to message an AI team on Telegram and get a working app, without explaining everything from scratch each time."
+- "I need my AI agents to have clear roles—so I know who handles design, implementation, and quality."
 
-- **Header**: Fixed navigation bar with logo and menu links
-- **Hero Section**: Full-width banner with headline, subheadline, and CTA button
-- **About Section**: Company introduction and value proposition
-- **Services Section**: Grid of AI services offered
-- **Contact Section**: Contact form and company information
-- **Footer**: Social links, copyright
+### Business Owners Seeking Custom Solutions
+- "I want a dedicated agent team that understands my business context and can build vibe-coded apps tailored to my needs."
+- "I need MCP tool integration so my AI agents can connect to my existing tools (CRM, databases, APIs)."
 
-### Responsive Breakpoints
+### IT Managers Wanting Self-Hosted Solutions
+- "I want to run my own LLM infrastructure so my data never leaves my premises."
+- "I need a partner to set up and maintain local LLM systems with agentic workflows."
 
-- Mobile: < 768px
-- Tablet: 768px - 1024px
-- Desktop: > 1024px
+## Functional Requirements
 
-### Visual Design
+### FR-1: Landing Page (Single Page)
+- Hero section with value proposition and CTA
+- Services overview (4 core services)
+- Team roles section explaining the Telegram agent personas
+- Trust indicators (client logos, testimonials placeholder)
+- Contact/CTA section with Telegram link
 
-#### Color Palette
-- **Primary**: `#0D0D0D` (Deep Black)
-- **Secondary**: `#1A1A2E` (Dark Navy)
-- **Accent**: `#00D9FF` (Electric Cyan)
-- **Accent Secondary**: `#7B2CBF` (Purple)
-- **Text Primary**: `#FFFFFF`
-- **Text Secondary**: `#A0A0A0`
-- **Background**: `#0D0D0D`
+### FR-2: Responsive Design
+- Mobile-first responsive layout
+- Works on desktop (1920px), tablet (768px), mobile (375px)
 
-#### Typography
-- **Headings**: "Outfit" (Google Fonts) - Bold, 700 weight
-- **Body**: "DM Sans" (Google Fonts) - Regular, 400 weight
-- **Font Sizes**:
-  - H1: 64px (desktop), 40px (mobile)
-  - H2: 48px (desktop), 32px (mobile)
-  - H3: 24px
-  - Body: 16px
-  - Small: 14px
-
-#### Spacing System
-- Section padding: 120px vertical (desktop), 60px (mobile)
-- Container max-width: 1200px
-- Grid gap: 32px
-- Element spacing: 16px, 24px, 32px
-
-#### Visual Effects
-- Gradient overlays on hero
-- Hover effects on buttons and cards (scale, glow)
-- Smooth scroll behavior
-- Fade-in animations on scroll
-- Subtle noise texture on background
-
-### Components
-
-#### Navigation
-- Logo (NosiAI text logo with gradient)
-- Menu items: Ana Sayfa, Hakkımızda, Hizmetler, İletişim
-- Mobile: Hamburger menu
-
-#### Hero Section
-- Headline: "Yapay Zeka ile Geleceği Şekillendirin"
-- Subheadline: "NosiAI olarak işinizi dönüştürecek AI çözümleri sunuyoruz"
-- CTA Button: "Projelerimizi İnceleyin" - links to services
-
-#### About Section
-- Company description text
-- Key statistics (Projects, Clients, Experience years)
-- Animated counter effect
-
-#### Services Section (6 services)
-1. AI Danışmanlık - Strategic AI implementation guidance
-2. Makine Öğrenimi - Custom ML model development
-3. Doğal Dil İşleme - NLP solutions
-4. Bilgisayar Görüşü - Computer vision applications
-5. AI Entegrasyon - Existing system integration
-6. Özel AI Çözümleri - Custom AI product development
-
-#### Contact Section
-- Contact form (Name, Email, Company, Message)
-- Company info: Address, Phone, Email
-- Map placeholder area
-
-#### Footer
-- Logo
-- Quick links
-- Social media icons (LinkedIn, Twitter, Instagram)
-- Copyright text
-
----
-
-## 3. Functionality Specification
-
-### Core Features
-- Responsive single-page website
+### FR-3: Visual Design
+- Modern, tech-forward aesthetic
+- Dark theme with accent colors reflecting AI/tech branding
 - Smooth scroll navigation
-- Form validation (client-side)
-- Mobile menu toggle
-- Scroll-triggered animations
-- Counter animation for statistics
 
-### User Interactions
-- Click navigation → smooth scroll to section
-- Hover buttons → scale + glow effect
-- Submit form → client-side validation feedback
-- Mobile menu toggle → slide-in menu
+### FR-4: Navigation
+- Single-page scroll navigation
+- Smooth anchor links to sections
 
-### Data Handling
-- Form: Console log on submit (no backend)
-- No persistent data storage
+### FR-5: Performance
+- Static HTML/CSS/JS (no build step required)
+- Fast load times under 2 seconds
+- No external framework dependencies
 
-### Edge Cases
-- Empty form submission → show validation errors
-- Mobile menu open → close on link click
-- Long service titles → text truncation
+## Acceptance Criteria
 
----
+### AC-1: Page Structure
+- [ ] Header with logo and navigation links
+- [ ] Hero section with headline, subheadline, CTA button
+- [ ] Services section with 4 service cards
+- [ ] Team section explaining 5 Telegram agent roles
+- [ ] Contact/footer section
 
-## 4. Acceptance Criteria
+### AC-2: Visual Requirements
+- [ ] Responsive across all breakpoints
+- [ ] Consistent color scheme throughout
+- [ ] Typography hierarchy is clear and readable
+- [ ] All sections have proper spacing
 
-- [ ] Page loads without errors
-- [ ] All sections visible and properly styled
-- [ ] Navigation smooth-scrolls to correct sections
-- [ ] Mobile menu works on small screens
-- [ ] Form validates required fields
-- [ ] Hover effects work on interactive elements
-- [ ] Responsive design works at all breakpoints
-- [ ] All fonts load correctly
-- [ ] No horizontal scroll on any device size
+### AC-3: Interaction
+- [ ] Navigation links scroll smoothly to sections
+- [ ] CTA button links to Telegram
+- [ ] No JavaScript errors in console
+
+### AC-4: Deployment
+- [ ] Docker container runs on port 8080
+- [ ] Uses nginx:alpine
+- [ ] Health check endpoint returns 200
+- [ ] Survives docker compose down -v && docker compose up -d
+
+### AC-5: Files
+- [ ] index.html exists and renders correctly
+- [ ] style.css exists with all styles
+- [ ] script.js exists with interactions
+- [ ] All references use relative paths (./style.css, ./script.js)

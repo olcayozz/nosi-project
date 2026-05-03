@@ -1,105 +1,88 @@
-# ARCHITECTURE - NosiAI Landing Page
+# Nosi AI - Architecture Document
 
-## 1. Project Structure
+## Components
+
+### Landing Page Components
+
+1. **Header**
+   - Logo (Nosi AI branding)
+   - Navigation links (Home, Services, Team, Contact)
+   - Fixed position on scroll
+
+2. **Hero Section**
+   - Headline: Value proposition for SMBs
+   - Subheadline: Description of agentic IT services
+   - CTA Button: Link to Telegram for consultation
+
+3. **Services Section**
+   - 4 service cards in grid layout:
+     - Custom Agent Team Setup
+     - Vibe-Coded Apps
+     - MCP Tool Integration
+     - Self-Hosted LLM Infrastructure
+   - Each card: icon, title, description
+
+4. **Team Section**
+   - 5 Telegram agent role cards:
+     - CEO Agent - Strategic decisions, client communication
+     - Architect Agent - System design, technical planning
+     - PM Agent - Project management, task coordination
+     - Worker Agent - Code implementation, feature development
+     - QA Agent - Testing, quality assurance, bug detection
+
+5. **Contact/Footer Section**
+   - Telegram link CTA
+   - Company tagline
+   - Copyright notice
+
+## Tech Stack
+
+- **HTML5**: Semantic markup, single-page structure
+- **CSS3**: Custom styles, CSS variables, responsive media queries
+- **JavaScript (ES6+)**: Vanilla JS, no external libraries
+- **Docker**: nginx:alpine for static file serving
+- **No frameworks**: No React, Vue, Tailwind, or npm dependencies
+
+## File Structure
 
 ```
 nosi-project/
-├── index.html          # Main HTML file
-├── style.css           # All CSS styles
-├── script.js           # JavaScript functionality
-└── README.md           # Setup instructions
+├── index.html          # Main HTML (entry point)
+├── css/
+│   └── style.css       # All CSS styles (linked as ./css/style.css)
+├── js/
+│   └── main.js        # JavaScript functionality (linked as ./js/main.js)
+├── Dockerfile          # Docker image build
+├── docker-compose.yml  # Container orchestration
+├── nginx.conf          # Nginx configuration
+└── README.md          # Setup instructions
 ```
 
-## 2. Technical Architecture
+**Note:** CSS and JS use relative paths from project root (e.g., `./css/style.css`, `./js/main.js`).
 
-### Technology Stack
-- **HTML5**: Semantic markup
-- **CSS3**: Custom styles with CSS variables
-- **JavaScript (ES6+)**: Vanilla JS, no libraries
+## Deployment
 
-### File Structure & Responsibilities
+### Docker Configuration
 
-#### index.html
-- Semantic HTML5 structure
-- Sections: header, hero, about, services, contact, footer
-- Google Fonts loaded via CDN
-- CSS and JS linked via relative paths
+**Dockerfile** (nginx:alpine):
+- Base image: nginx:alpine
+- Copy static files to /usr/share/nginx/html/
+- Expose port 8080
+- No build step required (static files only)
 
-#### style.css
-- CSS custom properties for theming
-- Reset/global styles
-- Section-specific styles
-- Responsive media queries
-- Animations and transitions
+**docker-compose.yml**:
+- Service: nosi-landing
+- Image: nosi-landing (built from Dockerfile)
+- Port mapping: 8080:80
+- Health check: GET /health returns 200
+- Restart policy: always
+- Volume: ./:/usr/share/nginx/html:ro (for development)
 
-#### script.js
-- Mobile menu toggle
-- Smooth scroll navigation
-- Form validation
-- Scroll-triggered animations
-- Counter animation
+### Health Check
+- Endpoint: GET /health
+- Expected response: 200 OK
+- Container survives: `docker compose down -v && docker compose up -d`
 
-## 3. CSS Architecture
-
-### CSS Variables
-```css
-:root {
-  --color-primary: #0D0D0D;
-  --color-secondary: #1A1A2E;
-  --color-accent: #00D9FF;
-  --color-accent-secondary: #7B2CBF;
-  --color-text: #FFFFFF;
-  --color-text-secondary: #A0A0A0;
-  --font-heading: 'Outfit', sans-serif;
-  --font-body: 'DM Sans', sans-serif;
-}
-```
-
-### CSS Structure
-1. Reset & Base
-2. Typography
-3. Layout utilities
-4. Component styles
-5. Section styles
-6. Animation keyframes
-7. Media queries
-
-## 4. JavaScript Architecture
-
-### Module Pattern
-- Event listeners for DOMContentLoaded
-- Encapsulated functions per feature
-- No external dependencies
-
-### Features
-- `initNavigation()` - Menu toggle and smooth scroll
-- `initAnimations()` - Scroll-triggered effects
-- `initForm()` - Form validation
-- `initCounters()` - Number counter animation
-
-## 5. Responsive Strategy
-
-### Breakpoints
-- Desktop: > 1024px
-- Tablet: 768px - 1024px
-- Mobile: < 768px
-
-### Approach
-- Mobile-first base styles
-- Desktop overrides via media queries
-- Fluid typography with clamp()
-- Grid to flexbox fallbacks
-
-## 6. Performance Considerations
-
-- No external JS libraries
-- Google Fonts: display=swap
-- CSS animations over JS where possible
-- Minimal DOM manipulation
-- Lazy-load consideration for images (future)
-
-## 7. Browser Support
-
-- Modern browsers (Chrome, Firefox, Safari, Edge)
-- CSS Grid and Flexbox
-- ES6+ JavaScript
+### Port Configuration
+- Internal: 80 (nginx default)
+- External: 8080 (mapped in docker-compose.yml)
