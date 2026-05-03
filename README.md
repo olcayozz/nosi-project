@@ -1,26 +1,28 @@
-# NosiAI Landing Page
+# Nosi - Agentic IT Solutions
 
-NosiAI - Yapay Zeka Ajansı tanıtım landing page'i.
+Lokal LLM'lerle çalışan agentic IT şirketi için landing page.
 
 ## Özellikler
 
 - Modern karanlık tasarım
-- Yapay zeka glowing efektleri
-- Responsive yapı
-- Hizmetler bölümü (6 hizmet kartı)
+- Agent ekibi görselleştirmesi (Telegram → CEO → Architect → PM → Worker/QA → Staging)
+- 4 hizmet kartı (Özel Agent Ekibi, Vibe-Coded Geliştirme, MCP Tool Entegrasyonu, Self-Hosted LLM)
 - İletişim formu
+- Responsive tasarım
 - Scroll animasyonları
+- Health check endpoint (`/health`)
 
 ## Kurulum
 
 ### Docker ile
 
 ```bash
-docker build -t nosi-ai .
-docker run -d -p 8080:8080 nosi-ai
+docker compose up -d
 ```
 
 Tarayıcıda `http://localhost:8080` adresini ziyaret edin.
+
+Health check: `http://localhost:8080/health`
 
 ### Yerel Geliştirme
 
@@ -39,7 +41,7 @@ npx serve .
 - HTML5
 - CSS3 (Custom Properties, Animations)
 - Vanilla JavaScript
-- Nginx
+- Nginx Alpine
 
 ## Lisans
 
