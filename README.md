@@ -42,13 +42,10 @@ nosi-project/
 ├── Dockerfile
 ├── docker-compose.yml
 ├── index.html              # Ana landing page
-├── nginx.conf             # Nginx konfigürasyonu
-├── css/
-│   └── style.css        # Stil dosyası
-├── js/
-│   └── main.js        # JavaScript
+├── style.css               # Stil dosyası
+├── script.js               # JavaScript
 └── health/
-    └── index.html     # Health check
+    └── index.html          # Health check
 ```
 
 ## Teknolojiler
