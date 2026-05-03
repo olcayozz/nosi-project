@@ -1,52 +1,63 @@
-# PRD - Nosi Landing Page
+# Nosi Landing Page - PRD
 
 ## Problem Statement
 
-Nosi, agentic AI sistemleri geliştiren bir IT şirketidir. Potansiyel müşterilerin şirketi keşfetmesi, hizmetlerini anlaması ve iletişime geçmesi için modern, hızlı ve etkileyici bir landing page gereklidir.
+Nosi, lokal LLM'lerle çalışan agentic IT şirketi olarak, potansiyel müşterilere hizmetlerini tanıtmak ve web üzerinden ulaşılabilir olmak için profesyonel bir landing page'e ihtiyaç duymaktadır. Hedef kitle geleneksel yazılım ekibi yerine self-hosted agentic alternatif arayan küçük/orta ölçekli işletmelerdir.
 
 ## User Stories
 
-1. **Ziyaretçi** olarak, ana sayfada Nosi'nin ne yaptığını 3 saniyede anlayabilmeliyim.
-2. **Potansiyel müşteri** olarak, hangi hizmetleri sunduğunuzu görebilmeliyim.
-3. **İş ortağı** olarak, şirketiniz hakkında güven verici bilgiler (hakkımızda, ekip) görmek istiyorum.
-4. **Müşteri adayı** olarak, kolayca iletişim formu veya e-posta ile ulaşabilmeliyim.
+1. **Potansiyel Müşteri** - Sektöründe agentic yazılım geliştirme çözümü arayan bir işletme sahibi olarak, Nosi'nin ne yaptığını hızlıca anlamak ve iletişime geçmek istiyorum.
+
+2. **Teknoloji Karar Vericisi** - Self-hosted LLM altyapısı kurmak isteyen CTO olarak, Nosi'nin teknik yeteneklerini ve hizmet kapsamını net şekilde görmek istiyorum.
+
+3. **Girişimci** - Startup olarak, vibe-coded uygulama geliştirme hizmeti almak istiyorum ve hizmetlerin detaylarını öğrenmek istiyorum.
 
 ## Functional Requirements
 
-### 1. Header/Navigation
-- Logo (Nosi metin veya grafik)
-- Navigation links: Home, Services, About, Contact
-- Mobile hamburger menu
+### Header/Navigation
+- Logo (Nosi)
+- Navigation links: Services, Process, Contact
+- Mobile responsive hamburger menu
 
-### 2. Hero Section
-- Ana başlık ve alt metin
-- CTA buton (Get Started / Contact)
-- Arka plan görseli veya gradient
+### Hero Section
+- Ana headline: "Agentic IT Solutions for the Modern Enterprise"
+- Subheadline: "Telegram üzerinden özel agent ekibi ile uçtan uca yazılım geliştirme"
+- Call-to-action button: "Get Started"
 
-### 3. Services Section
-- 3-4 hizmet kartı (AI Automation, Agent Development, Consulting, Custom Solutions)
-- Her kart: İkon, Başlık, Kısa açıklama
+### Services Section
+- 4 ana hizmet kartı:
+  1. Özel Agent Ekipi Kurulumu
+  2. Vibe-coded Uygulama Geliştirme
+  3. MCP Tool Entegrasyonu
+  4. Self-hosted LLM Altyapısı
 
-### 4. About Section
-- Şirketin missiyonu/vizyonu
-- Kısa metin
+### Process Section
+- Nasıl çalıştığımız:
+  1. Müşteri Telegram'da Nosi'ye ulaşır
+  2. Agent ekibi (CEO, Architect, PM, Worker, QA) atanır
+  3. Ekip projeyi geliştirir ve otomatik staging'e deploy eder
+  4. QA doğrulama yapılır
 
-### 5. Contact Section
-- İletişim formu (Name, Email, Message)
-- Email ve sosyal medya linkleri
+### Footer
+- Contact bilgileri (Telegram linki)
+- Sosyal medya linkleri
+- Copyright
 
-### 6. Footer
-- Telif hakkı
-- Sosyal medya ikonları
+### Technical Requirements
+- Plain HTML + CSS + JS (NO frameworks, NO npm)
+- Responsive design (mobile, tablet, desktop)
+- Smooth scroll navigation
+- Modern, clean UI
 
 ## Acceptance Criteria
 
-- [ ] Sayfa plain HTML/CSS/JS ile yazılmıştır (framework yok)
-- [ ] Tüm bölümler (Hero, Services, About, Contact, Footer) mevcut
-- [ ] Responsive tasarım (mobil, tablet, desktop)
-- [ ] Navigation'da smooth scroll var
-- [ ] İletişim formu görsel olarak mevcut
-- [ ] Nginx alpine container'da port 8080'de çalışıyor
-- [ ] /health endpoint çalışıyor
-- [ ] Loading süresi 3 saniyeden az
-- [ ] Tüm external linkler çalışıyor (sosyal medya)
+- [ ] Sayfa plain HTML/CSS/JS ile yazılmış olmalı (React/Vue/Angular yok)
+- [ ] Tüm sayfa bileşenleri (header, hero, services, process, footer) mevcut olmalı
+- [ ] Responsive tasarım tüm ekran boyutlarında çalışmalı
+- [ ] Navigation linkleri ilgili bölümlere smooth scroll yapmalı
+- [ ] CTA butonu tıklanabilir olmalı
+- [ ] Hizmet kartları düzgün görünmeli
+- [ ] Process akışı görsel olarak net şekilde anlaşılabilir olmalı
+- [ ] Footer'da Telegram linki bulunmalı
+- [ ] Dosyalar relative path kullanmalı (./css/style.css)
+- [ ] Docker nginx:alpine ile port 8080'de çalışmalı
