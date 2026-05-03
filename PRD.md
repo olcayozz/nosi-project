@@ -2,51 +2,70 @@
 
 ## Problem Statement
 
-Nosi, agentic AI sistemleri geliştiren bir IT şirketidir. Potansiyel müşterilerin şirketi keşfetmesi, hizmetlerini anlaması ve iletişime geçmesi için modern, hızlı ve etkileyici bir landing page gereklidir.
+Nosi, lokal LLM'lerle çalışan agentic bir IT şirketidir. Müşteriler Telegram üzerinden CEO, Architect, PM, Worker ve QA agentlarından oluşan bir ekiple yazışarak uçtan uca yazılım geliştirme hizmeti alırlar.
+
+**Sorun:** Potansiyel müşterilerin Nosi'nin ne yaptığını, nasıl çalıştığını ve hangi hizmetleri sunduğunu anlayabileceği bir tanıtım sayfası bulunmamaktadır.
+
+**Hedef:** Kendi kendine yönetilen agentic alternatifler arayan KOBİ'ler için profesyonel bir landing page oluşturmak.
 
 ## User Stories
 
-1. **Ziyaretçi** olarak, ana sayfada Nosi'nin ne yaptığını 3 saniyede anlayabilmeliyim.
-2. **Potansiyel müşteri** olarak, hangi hizmetleri sunduğunuzu görebilmeliyim.
-3. **İş ortağı** olarak, şirketiniz hakkında güven verici bilgiler (hakkımızda, ekip) görmek istiyorum.
-4. **Müşteri adayı** olarak, kolayca iletişim formu veya e-posta ile ulaşabilmeliyim.
+1. **Potansiyel Müşteri** olarak, Nosi'nin ne yaptığını 5 saniyede anlamak istiyorum
+2. **Potansiyel Müşteri** olarak, sunulan hizmetleri detaylı görmek istiyorum
+3. **Potansiyel Müşteri** olarak, Telegram ile nasıl iletişim kuracağımı görmek istiyorum
+4. **Potansiyel Müşteri** olarak, "Hemen Başla" butonuyla sohbete başlamak istiyorum
 
 ## Functional Requirements
 
-### 1. Header/Navigation
-- Logo (Nosi metin veya grafik)
-- Navigation links: Home, Services, About, Contact
-- Mobile hamburger menu
+### FR-001: Header Section
+- Logo ve şirket adı "Nosi"
+- Navigation: Hizmetler, Nasıl Çalışır, İletişim
+- "Başla" CTA butonu
 
-### 2. Hero Section
-- Ana başlık ve alt metin
-- CTA buton (Get Started / Contact)
-- Arka plan görseli veya gradient
+### FR-002: Hero Section
+- Ana başlık: "Kendi Agentik Yazılım Ekibin"
+- Alt başlık: Telegram'da sohbeterek uçtan uca yazılım geliştirme
+- Desteklenen teknolojiler: Local LLM, MCP Tool, Staging Deploy
+- "Telegram'da Başla" CTA butonu (`https://t.me/nosi_agent`)
 
-### 3. Services Section
-- 3-4 hizmet kartı (AI Automation, Agent Development, Consulting, Custom Solutions)
-- Her kart: İkon, Başlık, Kısa açıklama
+### FR-003: Nasıl Çalışır Section
+- 4 adımlı süreç:
+  1. Telegram'da Nosi'ye mesaj at
+  2. CEO + Architect analiz eder
+  3. Worker geliştirir, staging'e deploy eder
+  4. QA doğrular, onay verir
 
-### 4. About Section
-- Şirketin missiyonu/vizyonu
-- Kısa metin
+### FR-004: Agentlar Section
+- 5 agent tanıtım kartı:
+  1. **CEO Agent**: Proje yönetimi, müşteri iletişimi
+  2. **Architect Agent**: Sistem tasarımı, teknik kararlar
+  3. **PM Agent**: İş analizi, gereksinim yönetimi
+  4. **Worker Agent**: Kod yazma, debug, deploy
+  5. **QA Agent**: Test, doğrulama, kalite kontrol
 
-### 5. Contact Section
-- İletişim formu (Name, Email, Message)
-- Email ve sosyal medya linkleri
+### FR-005: Hizmetler Section
+- 4 hizmet kartı:
+  1. **Özel Agent Ekibi Kurulumu**: Şirketinize özel Telegram agentları
+  2. **Vibe-Coded Geliştirme**:minimal dokümantasyonla hızlı geliştirme
+  3. **MCP Tool Entegrasyonu**: Model Context Protocol entegrasyonu
+  4. **Self-Hosted LLM Altyapısı**: Kendi LLM sunucunuz
 
-### 6. Footer
+### FR-006: Teknoloji Stack Section
+- Local LLM, Docker, Nginx, Telegram Bot API, MCP
+
+### FR-007: Footer
+- Telegram linki
+- Email: hello@nosi.ai
 - Telif hakkı
-- Sosyal medya ikonları
 
 ## Acceptance Criteria
 
-- [ ] Sayfa plain HTML/CSS/JS ile yazılmıştır (framework yok)
-- [ ] Tüm bölümler (Hero, Services, About, Contact, Footer) mevcut
-- [ ] Responsive tasarım (mobil, tablet, desktop)
-- [ ] Navigation'da smooth scroll var
-- [ ] İletişim formu görsel olarak mevcut
-- [ ] Nginx alpine container'da port 8080'de çalışıyor
+- [ ] Sayfa 3 saniyeden kısa sürede yüklenir
+- [ ] Tüm metinler Türkçe olarak görüntülenir
+- [ ] CTA butonları tıklanabilir durumdadır
+- [ ] Mobil cihazlarda düzgün görünür (responsive)
+- [ ] "Telegram'da Başla" butonu `https://t.me/nosi_agent` linkine yönlendirir
+- [ ] Sayfa plain HTML+CSS+JS ile yazılmıştır (framework yok)
+- [ ] Relative path kullanılmıştır (./css/style.css)
 - [ ] /health endpoint çalışıyor
-- [ ] Loading süresi 3 saniyeden az
-- [ ] Tüm external linkler çalışıyor (sosyal medya)
+- [ ] Nginx alpine container'da port 8080'de çalışıyor
