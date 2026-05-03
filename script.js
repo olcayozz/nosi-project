@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
-    const nav = document.querySelector('.nav');
+    const nav = document.querySelector('.nav-links');
     const navLinks = document.querySelectorAll('.nav-link');
 
     hamburger.addEventListener('click', function() {
