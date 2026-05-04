@@ -3,65 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nosi - Lokal LLM'lerle çalışan agentic IT şirketi</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22%23007bff%22/></svg>">
+    <title>Nosi AI Lab</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
+    <!-- Header Navigation -->
+    <header class="header">
         <div class="container">
-            <div class="hero-content">
-                <h1>NOSI</h1>
-                <p>Lokal LLM'lerle çalışan agentic IT şirketi</p>
-                <a href="#iletisim" class="btn">İletişime Geç</a>
-            </div>
+            <h1 class="logo">Nosi AI Lab</h1>
+            <nav class="nav">
+                <ul>
+                    <li><a href="#home">Ana Sayfa</a></li>
+                    <li><a href="#about">Hakkımızda</a></li>
+                    <li><a href="#services">Hizmetler</a></li>
+                    <li><a href="#contact">İletişim</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h2 class="hero-title">Yerel LLM'lerle Agent Sistemler</h2>
+            <p class="hero-subtitle">AI tabanlı yazılım geliştirme çözümleri ile şirketlerin dijital dönüşümünü destekliyoruz</p>
+            <a href="#contact" class="btn btn-primary">İletişime Geç</a>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="about">
+    <section id="about" class="about">
         <div class="container">
-            <h2>Hakkımızda</h2>
-            <p>Nosi, müşterilerin iş süreçlerine özel agent ekipleri kurarak, lokal LLM'lerle çalışan agentic sistemler geliştirir. Telegram üzerinden müşteriyle etkileşim kurarak uçtan uca yazılım geliştirme süreçlerini yönetir, otomatik staging'e deploy eder ve QA süreçlerini doğrular.</p>
-            <p>Yazılım çözümlerimizde lokal LLM'leri kullanarak daha güvenli, özgün ve özelleştirilmiş sistemler sunuyoruz.</p>
+            <h2 class="section-title">Nosi AI Lab</h2>
+            <div class="about-content">
+                <p>Nosi AI Lab, yerel LLM'ler (Yerel Büyük Dil Modelleri) kullanarak agentic sistemler geliştiren bir yapay zeka şirketidir. Yerel modellerle çalışarak, veri gizliliğini ve güvenlik sağlarken aynı zamanda yüksek performanslı, özelleştirilebilir çözümler sunuyoruz.</p>
+                <p>Our approach utilizes agent teams - coordinated groups of specialized AI agents working together to solve complex business problems. This methodology allows us to create highly efficient and adaptive software solutions tailored to your specific needs.</p>
+            </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section class="services">
+    <section id="services" class="services">
         <div class="container">
-            <h2>Hizmetlerimiz</h2>
+            <h2 class="section-title">Hizmetlerimiz</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">👥</div>
-                    <h3>Agent Ekibi Kurulumu</h3>
-                    <p>İş süreçlerinize özel agent ekibi kurulumu ve yönetimi.</p>
+                    <div class="service-icon">🧠</div>
+                    <h3 class="service-title">Agentic Sistemler</h3>
+                    <p class="service-description">Yerel LLM'lerle çalışan koordineli agenciler ile iş süreçlerinizi otomatikleştirin ve optimize edin.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">💻</div>
-                    <h3>Vibe-Coded Uygulama Geliştirme</h3>
-                    <p>Yaratıcı ve etkili uygulamalar geliştirme süreci.</p>
+                    <div class="service-icon">⚙️</div>
+                    <h3 class="service-title">Özelleştirilmiş AI</h3>
+                    <p class="service-description">İş ihtiyaçlarınıza özel yapay zeka çözümleri geliştirerek verimliliğinizi artırın.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">🦙</div>
-                    <h3>Self-Hosted LLM Altyapısı</h3>
-                    <p>Özgün LLM altyapısı kurulumu ve yönetimi.</p>
+                    <div class="service-icon">🔒</div>
+                    <h3 class="service-title">Güvenli Geliştirme</h3>
+                    <p class="service-description">Veri gizliliği ve güvenlik ön planda, yerel modellerle korunaklı çözümler sunuyoruz.</p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="iletisim" class="contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <h2>İletişim</h2>
+            <h2 class="section-title">İletişim</h2>
             <div class="contact-content">
                 <div class="contact-info">
-                    <h3>Telegram üzerinden yazın</h3>
-                    <p>Telegram üzerinden ekip ile iletişime geçin</p>
-                    <a href="mailto:info@nosi.ai" class="btn">E-posta ile yazın</a>
-                    <a href="https://t.me/nosi_team" class="btn telegram-btn" target="_blank">Telegram'da Yazın</a>
+                    <h3 class="contact-title">Bize Ulaşın</h3>
+                    <p class="contact-description">Soru ve önerileriniz için bizimle iletişime geçin:</p>
+                    <a href="mailto:info@nosi.ai" class="contact-email">info@nosi.ai</a>
+                    <p class="contact-text">Yerel LLM'lerle birlikte geleceğe adım atın!</p>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Adınız" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="E-posta Adresiniz" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Mesajınız" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Gönder</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -70,10 +99,10 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Nosi. Tüm hakları saklıdır.</p>
+            <p>&copy; 2024 Nosi AI Lab. Tüm hakları saklıdır.</p>
         </div>
     </footer>
 
-    <script src="./js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
