@@ -1,34 +1,56 @@
-# Components
+# Architecture Design: Nosi AI Lab Landing Page
 
-## Page Structure
-- Hero Section: Contains logo text "Nosi", tagline "Self-hosted AI for everyone", and "Learn More" button
-- About Section: Describes lab research for local LLMs (2-3 sentences)
-- Services Section: Three cards with headings and one-line descriptions for Inference, Agents, and Tools
-- Contact Section: Simple email contact with mailto: link
+## Components
+
+1. **Single HTML File** (`index.html`)
+   - Contains all HTML structure
+   - Embeds CSS and JavaScript
+   - No external dependencies
+
+2. **CSS Styles** (`style.css`)
+   - Contains all styling rules
+   - Responsive design using CSS media queries
+   - Implements dark theme with specified color palette
+
+3. **JavaScript** (`script.js`)
+   - Handles smooth scrolling for navigation
+   - Minimal interactivity (if any needed)
 
 ## Tech Stack
-- HTML5 for structure and semantic markup
-- CSS3 for styling and responsive design
-- JavaScript for minimal interactivity (if needed)
-- No frameworks, npm, or build tools
-- Pure vanilla JavaScript for any dynamic behavior
+
+- **Frontend**: Plain HTML5, CSS3, JavaScript (ES6+)
+- **Framework**: None (vanilla technologies only)
+- **Build Process**: None (static site)
+- **Deployment**: Docker with nginx:alpine
+- **Hosting**: HTTP server on port 8080
 
 ## File Structure
+
 The following files will be created by the worker:
-- index.html
-- style.css
-- Dockerfile
-- nginx.conf (for nginx configuration)
-- README.md (for deployment instructions)
+
+1. `index.html` - Main landing page with all content
+2. `style.css` - Complete styling for the landing page 
+3. `script.js` - Minimal JavaScript for interactivity
+4. `Dockerfile` - Container configuration for nginx deployment
 
 ## Deployment
-Docker-based deployment using nginx:alpine image
-- Container listens on port 8080
-- Nginx serves content from /usr/share/nginx/html
-- Dockerfile copies all necessary files to container
-- Nginx configuration file includes health check endpoint
 
-## Relative Paths
-All internal links and assets use relative paths:
-- CSS file: ./style.css
-- All content in root directory of web server
+The application will be containerized using nginx:alpine base image:
+
+1. **Dockerfile**:
+   - Uses nginx:alpine as base
+   - Copies index.html, style.css, and script.js to nginx html directory
+   - Configures nginx to serve on port 8080
+   - Includes health check
+
+2. **Nginx Configuration**:
+   - Serving static files only
+   - Port 8080 exposure as required
+   - Basic health check endpoint
+
+3. **Health Check**:
+   - Simple GET /health endpoint
+   - Returns 200 status for successful deployment
+
+4. **Port Exposure**:
+   - Server listens on port 8080 as specified

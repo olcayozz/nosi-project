@@ -1,35 +1,57 @@
-# Problem Statement
+# Product Requirements Document: Nosi AI Lab Landing Page
 
-Nosi is a self-hosted AI platform designed to make local large language models (LLMs) accessible to everyone. The platform requires a modern, responsive landing page that effectively communicates its value proposition, technical capabilities, and contact information to potential users and researchers.
+## Problem Statement
+
+Nosi AI Lab needs a professional, visually appealing single-page landing site to communicate their mission and services to potential users and collaborators. The site should clearly convey that they are a research environment focused on local LLMs, while providing clear sections about their offerings and contact information. The landing page must be responsive and follow a specific dark theme design.
 
 ## User Stories
 
-As a potential user, I want to quickly understand what Nosi offers so I can decide whether to explore further.
-As a researcher, I want to learn about the lab's research on local LLMs to understand the platform's technical foundation.
-As a developer, I want to understand Nosi's core services to evaluate integration opportunities.
-As a visitor, I want a clean, dark-themed website that works on both mobile and desktop devices.
-As an interested user, I want to easily contact the team for inquiries or collaboration.
+1. As a visitor, I want to see a clear hero section that introduces Nosi AI Lab and its core value proposition
+2. As a visitor, I want to understand what Nosi AI Lab does and their research focus on local LLMs
+3. As a visitor, I want to quickly see the three main services they offer
+4. As a visitor, I want a clear way to contact them via email
+5. As a visitor, I want the site to look professional with a consistent dark theme on all devices
 
 ## Functional Requirements
 
-- A hero section with the Nosi logo/text, tagline, and learn more call-to-action
-- An about section describing the lab's research efforts for local LLMs
-- A services section with three cards covering Inference, Agents, and Tools
-- A contact section with email link
-- A responsive design that displays as single column on mobile and three-column grid on desktop
-- Dark theme styling with specific color palette (#0a0a0a bg, #e0e0e0 text, #00d4aa accent)
-- Plain HTML/CSS/JS implementation with no frameworks
-- Docker deployment using nginx:alpine on port 8080
+1. **Hero Section**:
+   - Display "Nosi" as a heading
+   - Include tagline "Self-hosted AI for everyone"
+   - Add "Learn More" CTA button that scrolls to main content
+
+2. **About Section**:
+   - Two to three sentences describing Nosi AI Lab as a research environment for local LLMs
+   - Must be responsive and readable on all devices
+
+3. **Services Section**:
+   - Three cards: Inference, Agents, Tools
+   - Each card should have a one-line description
+   - Responsive design that shows single column on mobile, three columns on desktop
+
+4. **Contact Section**:
+   - Include email contact "hello@nosi.example" using mailto link
+   - Must be clearly visible and accessible
+
+5. **Design Requirements**:
+   - Dark theme with #0a0a0a background
+   - Text color #e0e0e0
+   - Accent color #00d4aa
+   - Fully responsive layout
+   - Plain HTML/CSS/JS only (no frameworks)
+
+6. **Technical Requirements**:
+   - Single HTML file with embedded CSS/JS
+   - Docker deployment with nginx:alpine
+   - Server running on port 8080
 
 ## Acceptance Criteria
 
-- Landing page renders with correct dark theme colors
-- Mobile view displays content in single column
-- Desktop view displays services in 3-column grid
-- All sections are present and correctly styled
-- Hero section features a prominent "Learn More" CTA
-- Contact information uses mailto: link
-- Implementation uses only plain HTML/CSS/JS
-- Dockerfile is included for nginx:alpine deployment
-- No external dependencies or frameworks
-- Page is responsive across device sizes
+1. The page loads correctly in modern browsers
+2. All sections are clearly visible and properly spaced
+3. The dark theme is consistently applied across the entire site
+4. The accent color is used appropriately for CTAs and highlights
+5. Mobile responsiveness is working correctly (single column layout)
+6. Desktop layout shows three-column services section
+7. All links work as expected (including mailto: link)
+8. The page meets accessibility standards for text contrast
+9. The Docker deployment works correctly with nginx:alpine
