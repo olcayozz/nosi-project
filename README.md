@@ -1,63 +1,24 @@
-# Nosi Landing Page
+# Nosi AI Lab - Landing Page
 
-Nosi - Lokal LLM'lerle çalışan agentic IT şirketi tanıtım sayfası.
+This is a single-page landing site for Nosi AI Lab built with plain HTML, CSS and JavaScript.
 
-## Özellikler
+## Features
+- Dark theme with #0a0a0a background and #e0e0e0 text
+- Modern, responsive design
+- Smooth scrolling navigation
+- Form handling
+- Mobile-first approach
 
-- Modern karanlık tasarım
-- Agent flow görselleştirme
-- Responsive yapı
-- 4 adımlı süreç anlatımı
-- 5 agent kartı (CEO, Architect, PM, Worker, QA)
-- 4 hizmet kartı
-- Teknoloji stack bölümü
-- Telegram entegrasyonu
+## File Structure
+- index.html - Main landing page
+- css/style.css - Custom styling
+- js/main.js - JavaScript functionality
+- health/index.html - Health check endpoint
 
-## Kurulum
+## Requirements
+- Plain HTML/CSS/JS only (no frameworks or external dependencies)
+- Responsive design for all devices
+- Dark theme as specified
 
-### Docker ile
-
-```bash
-docker compose up -d
-```
-
-Tarayıcıda `http://localhost:8080` adresini ziyaret edin.
-
-### Yerel Geliştirme
-
-Herhangi bir web sunucusu ile açabilirsiniz:
-
-```bash
-# Python
-python -m http.server 8080
-
-# Node.js
-npx serve .
-```
-
-## Dosya Yapısı
-
-```
-nosi-project/
-├── Dockerfile
-├── docker-compose.yml
-├── index.html              # Ana landing page
-├── nginx.conf             # Nginx konfigürasyonu
-├── css/
-│   └── style.css        # Stil dosyası
-├── js/
-│   └── main.js        # JavaScript
-└── health/
-    └── index.html     # Health check
-```
-
-## Teknolojiler
-
-- HTML5
-- CSS3 (Custom Properties, Animations)
-- Vanilla JavaScript
-- Nginx (port 8080)
-
-## Lisans
-
-MIT
+## Deployment
+The application is containerized using Docker and can be deployed using docker-compose.
