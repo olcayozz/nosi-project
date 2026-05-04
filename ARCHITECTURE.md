@@ -1,115 +1,29 @@
-# Architecture Documentation
-## Nosi Landing Page - Simplified Version
+# Components
 
-### System Overview
-This landing page is a single-page application built with plain HTML, CSS, and JavaScript without any frameworks or external dependencies. The architecture follows a simple, clean structure designed for performance and maintainability.
+1. **HTML Structure** - Single HTML file containing all sections (Hero, About, Services, Contact)
+2. **CSS Styles** - Single CSS file for styling with dark theme and responsive layout
+3. **JavaScript** - Minimal JS for interactive elements (if needed)
+4. **Docker Configuration** - Dockerfile using nginx:alpine base image
 
-### File Structure
-```
-nosi-project/
-├── index.html              # Main landing page
-├── css/
-│   └── style.css        # Primary stylesheet
-├── js/
-│   └── main.js        # JavaScript functionality
-├── health/
-│   └── index.html     # Health check page
-├── docker-compose.yml   # Container orchestration
-├── Dockerfile           # Container build configuration
-└── README.md            # Project documentation
-```
+# Tech Stack
 
-### Component Architecture
+- **Frontend**: Plain HTML, CSS, JavaScript (no frameworks)
+- **Build Process**: None - static files only
+- **Deployment**: Docker container with nginx:alpine
 
-#### 1. HTML Structure
-- Semantic HTML5 elements for proper structure
-- Responsive grid layouts
-- Accessibility features
-- SEO-friendly structure
+# File Structure
 
-#### 2. CSS Architecture
-- Custom CSS properties for theme management
-- CSS Grid and Flexbox for layout
-- CSS animations and transitions for visual effects
-- Mobile-first approach with media queries
-- Modular class naming (BEM-style)
+The following files will be created:
+- `index.html` - Main landing page
+- `style.css` - Styling for the landing page
+- `Dockerfile` - Container configuration
+- `nginx.conf` - Nginx configuration (if needed)
 
-#### 3. JavaScript Functionality
-- Vanilla JavaScript for interactivity
-- DOM manipulation for dynamic content
-- Event handling for user interactions
-- Responsive behavior adjustments
-- No external libraries or frameworks
+# Deployment
 
-### Technology Stack
-
-#### Frontend
-- **HTML5**: Semantic markup and structure
-- **CSS3**: Styling with animations, transitions, and responsive design
-- **JavaScript**: Dynamic behavior and interactivity
-- **Nginx**: Web server for serving content (port 8080)
-
-#### Deployment
-- **Docker**: Containerized deployment
-- **docker-compose**: Orchestration of services
-- **Health checks**: Basic health endpoint
-
-### Data Flow
-
-1. **Initial Load**: Browser requests index.html
-2. **Asset Loading**: CSS and JS files are loaded via relative paths
-3. **Rendering**: HTML is parsed and CSS is applied
-4. **Interactivity**: JavaScript enhances user experience
-5. **Responsive Handling**: Media queries adjust layout for different screens
-
-### Responsive Design Approach
-- Mobile-first design philosophy
-- Media queries for breakpoints
-- Flexible grids using CSS Grid and Flexbox
-- Responsive typography
-- Touch-friendly interactive elements
-
-### Performance Considerations
-- No external dependencies
-- Lightweight implementation
-- Minimal HTTP requests
-- Efficient CSS and JavaScript
-- Optimized for fast load times
-
-### Security Considerations
-- No server-side code
-- Static file serving
-- No user data stored or processed
-- Secure deployment via Docker container
-
-### Deployment Architecture
-```
-[Client Browser]
-      |
-   [Nginx Server]
-      |
-[Static Files]
-      |
-[Health Check Endpoint]
-```
-
-### Docker Integration
-- Uses nginx for serving static files
-- Health check endpoint at /health
-- Port 8080 exposed for web access
-- Simple container orchestration with docker-compose
-
-### Maintenance
-- Simple file-based structure
-- No build step required
-- Easy to update content directly in HTML
-- Minimal maintenance overhead
-
-### Code Organization
-- index.html: Main page structure and content
-- css/style.css: All styling with dark theme
-- js/main.js: All JavaScript functionality including:
-  - Smooth scrolling navigation
-  - Form handling
-  - Header scroll effects
-  - Animation on scroll
+The application will be deployed in a Docker container:
+- Base image: `nginx:alpine`
+- Port: 8080
+- Files copied to: `/usr/share/nginx/html/`
+- No build steps required
+- Static file serving only

@@ -1,63 +1,48 @@
-# Product Requirements Document (PRD)
-## Nosi Landing Page - Simplified Version
+# Problem Statement
 
-### Project Overview
-Nosi is a landing page for an IT company that works with local LLMs to create agentic systems. This simplified version focuses on providing a clean, responsive landing page that effectively communicates the company's value proposition with a dark theme.
+Nosi AI Lab needs a professional landing website to showcase their research-oriented approach to local LLMs and self-hosted AI solutions. The website should clearly communicate their mission of providing accessible, privacy-focused AI technology while highlighting their core services. A simple, clean design with a dark theme that emphasizes technical capabilities is required.
 
-### Objective
-Create a modern, responsive landing page with a dark theme that clearly communicates the company's approach to software development using local LLMs and agent teams. The page will include essential sections to showcase services and enable contact.
+# User Stories
 
-### Features and Requirements
+As a visitor to the Nosi AI Lab website, I want to:
+1. See a clear introduction to the company and its purpose
+2. Understand what research environment Nosi AI Lab provides for local LLMs
+3. Quickly learn about the core services offered (Inference, Agents, Tools)
+4. Find a clear way to contact the team for inquiries
 
-#### Core Page Sections
+# Functional Requirements
+
 1. **Hero Section**
-   - Company name and tagline
-   - Introduction to the agentic development approach
-   - Clear call-to-action button
+   - Display company name "Nosi" prominently
+   - Show tagline "Self-hosted AI for everyone"
+   - Include a prominent "Learn More" CTA button
 
-2. **About Section** 
-   - 2-3 sentences explaining the company's approach
-   - Focus on local LLMs and agent team methodology
+2. **About Section**
+   - 2-3 sentences describing the lab as a research environment for local LLMs
+   - Clear explanation of the lab's focus and mission
 
 3. **Services Section**
-   - 3 service cards describing core offerings
-   - Visual representation with icons
-   - Clear descriptions
+   - Three service cards: Inference, Agents, Tools
+   - Each card contains one-line description
+   - Responsive layout (single-column on mobile, three-column on desktop)
 
 4. **Contact Section**
-   - Contact information with mailto link
-   - Simple contact form (optional)
+   - Simple email link to hello@nosi.example using mailto protocol
 
-#### Style Requirements
-- Dark theme throughout the page
-- Plain HTML/CSS/JS only (no frameworks)
-- Responsive design for all devices
-- Modern, clean aesthetic
+5. **Styling Requirements**
+   - Dark theme with #0a0a0a background
+   - Text color #e0e0e0
+   - Accent color #00d4aa
+   - Fully responsive design
+   - No frameworks, no build tools, no npm dependencies
 
-### Technical Requirements
-- **Stack**: Plain HTML + CSS + JavaScript (no frameworks, no npm)
-- **Style**: Custom CSS using modern techniques (Custom Properties, Animations)
-- **Structure**: Relative paths (./style.css, ./js/main.js)
-- **Responsive**: Mobile-first responsive design
-- **Performance**: Lightweight, fast-loading page
+# Acceptance Criteria
 
-### User Experience Goals
-1. Clear communication of the company's unique value proposition
-2. Visual demonstration of the agent-based development approach
-3. Easy navigation to different sections
-4. Professional yet approachable tone
-5. Strong call-to-action for engagement
-
-### Acceptance Criteria
-- All sections implemented as per requirements
-- Fully responsive on all device sizes
-- No external dependencies or frameworks
-- All HTML/CSS/JS files work with relative paths
-- Page loads and functions correctly in all modern browsers
-- Code follows clean, maintainable practices
-
-### Implementation Notes
-- The page should be a single static HTML file with embedded CSS and JS for minimal complexity
-- Use modern CSS features but keep compatibility with older browsers
-- Ensure accessibility standards are met
-- Content should be in Turkish for local audience
+- All sections are present and properly displayed
+- Color scheme matches specified dark theme (#0a0a0a, #e0e0e0, #00d4aa)
+- Services section displays properly on both mobile and desktop
+- Mobile view is single-column layout
+- Desktop view is three-column grid for services
+- All links and buttons work as expected
+- No external dependencies or build tools required
+- Site is completely self-contained in single HTML file
