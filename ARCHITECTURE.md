@@ -1,53 +1,42 @@
-# Components
+# Architecture Document: Nosi AI Lab Landing Site
 
-1. **HTML Structure**:
+## Components
+
+1. **HTML Structure**
    - Single HTML file containing all sections (hero, about, services, contact)
-   - Semantic HTML elements for proper structure
-   - Responsive grid for services section
+   - Semantic HTML5 elements for proper structure
 
-2. **CSS Styling**:
-   - Plain CSS for dark theme implementation
-   - Responsive design using media queries
-   - Grid layout for services section
-   - Consistent spacing and typography
+2. **CSS Styling**
+   - Single stylesheet for all visual components
+   - Responsive design with media queries
+   - Dark theme color scheme (#0a0a0a, #e0e0e0, #00d4aa)
 
-3. **JavaScript**:
-   - Minimal JavaScript for any interactive elements
-   - May include scroll behavior or animations if needed
+3. **JavaScript**
+   - Minimal interactivity (if needed)
+   - No frameworks or external libraries
 
-4. **Docker Deployment**:
+4. **Docker Deployment**
    - nginx:alpine base image
-   - File copy into /usr/share/nginx/html/ directory
-   - Port 8080 exposure
+   - Static file serving on port 8080
 
-# Tech Stack
+## Tech Stack
 
-- **Frontend**: Plain HTML5, CSS3, JavaScript (ES6)
-- **No Frameworks**: No React, Vue, Angular, or other frontend frameworks
-- **No Package Management**: No npm, yarn, pnpm, or build tools
-- **No External Dependencies**: Pure client-side code
-- **Deployment**: Docker with nginx:alpine base image
+- **Frontend**: Plain HTML5, CSS3, JavaScript (Vanilla JS)
+- **No Frameworks**: No React, Vue, Angular, or similar frameworks
+- **No Build Tools**: No npm, Webpack, or similar build processes
+- **No External Dependencies**: Pure HTML/CSS/JS with no external libraries
 
-# File Structure
+## File Structure
 
-The following files will be created by the Worker:
+The following files will be created:
+- `index.html` - Main landing page
+- `style.css` - Stylesheet for dark theme and responsive layout
+- `Dockerfile` - Container configuration for nginx deployment
 
-1. `index.html` - Main landing page content
-2. `style.css` - All styling for the landing page
-3. `Dockerfile` - Container configuration for deployment
-4. `nginx.conf` - Nginx configuration (if needed for custom setup)
+## Deployment
 
-# Deployment
-
-The deployment process will involve:
-1. Creating a Docker image based on nginx:alpine
-2. Copying all static files (HTML, CSS, JS) into /usr/share/nginx/html/ directory
-3. Exposing port 8080 for access
-4. Running the container to serve the landing page
-
-## Container Configuration
-
-- Base image: nginx:alpine
-- Working directory: /usr/share/nginx/html/
-- Port: 8080
-- Default server configuration will be used unless custom nginx.conf is provided
+The site will be deployed using nginx:alpine Docker image:
+- Base image: `nginx:alpine`
+- Copy all static files into `/usr/share/nginx/html/`
+- Expose port 8080
+- No custom nginx configuration required (uses default nginx behavior for static sites)
