@@ -28,6 +28,17 @@ body {
   padding: 0 20px;
 }
 
+/* Header */
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
 /* Hero Section */
 .hero {
   padding: 10rem 0 6rem;
@@ -41,7 +52,7 @@ body {
   color: var(--accent-color);
 }
 
-.hero p {
+.tagline {
   font-size: 1.3rem;
   margin-bottom: 2rem;
   color: #b0b0b0;
@@ -51,7 +62,7 @@ body {
 }
 
 /* Buttons */
-.btn {
+.cta-button {
   display: inline-block;
   padding: 0.8rem 2rem;
   border-radius: 50px;
@@ -69,7 +80,7 @@ body {
   border: 2px solid var(--accent-color);
 }
 
-.btn:hover {
+.cta-button:hover {
   background-color: transparent;
   transform: translateY(-3px);
   box-shadow: 0 6px 12px rgba(0, 212, 170, 0.3);
@@ -115,13 +126,13 @@ section h2::after {
   background-color: #121212;
 }
 
-.services-grid {
+.cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.service-card {
+.card {
   background-color: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
@@ -134,21 +145,56 @@ section h2::after {
   flex-direction: column;
 }
 
-.service-card:hover {
+.card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.service-card h3 {
+.card h3 {
   margin-bottom: 1rem;
   color: var(--text-color);
   font-size: 1.5rem;
 }
 
-.service-card p {
+.card p {
   color: #b0b0b0;
   flex-grow: 1;
   font-size: 1rem;
+}
+
+/* Contact */
+.contact {
+  padding: 5rem 0;
+  background-color: #121212;
+}
+
+.contact p {
+  text-align: center;
+  color: #b0b0b0;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.contact a {
+  color: var(--accent-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+.footer {
+  background-color: #050505;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+  color: #a0a0a0;
 }
 
 /* Contact */
@@ -212,11 +258,11 @@ section h2::after {
     font-size: 1rem;
   }
   
-  .service-card h3 {
+  .card h3 {
     font-size: 1.3rem;
   }
   
-  .services-grid {
+  .cards {
     grid-template-columns: 1fr;
   }
 }
@@ -230,12 +276,12 @@ section h2::after {
     font-size: 2rem;
   }
   
-  .btn {
+  .cta-button {
     width: 100%;
     max-width: 300px;
   }
   
-  .service-card {
+  .card {
     padding: 1.5rem;
   }
 }
