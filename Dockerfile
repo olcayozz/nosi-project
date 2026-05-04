@@ -1,9 +1,7 @@
 FROM nginx:alpine
 
 # Copy the landing page files to the nginx html directory
-COPY index.html /usr/share/nginx/html/
-COPY style.css /usr/share/nginx/html/
-COPY script.js /usr/share/nginx/html/
+COPY index.html /usr/share/nginx/html/index.html
 
 # Expose port 8080
 EXPOSE 8080

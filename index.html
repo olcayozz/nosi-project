@@ -4,60 +4,178 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosi AI Lab</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0a0a0a;
+            color: #e0e0e0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        h1, h2, h3 {
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        h1 {
+            font-size: 3rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #00d4aa;
+        }
+
+        p {
+            margin-bottom: 15px;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 120px 0;
+        }
+
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.5rem;
+            margin-bottom: 40px;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #00d4aa;
+            color: #0a0a0a;
+            padding: 12px 30px;
+            border-radius: 4px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #00b894;
+            transform: translateY(-2px);
+        }
+
+        .about {
+            text-align: center;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        .service-card {
+            background-color: #1a1a1a;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 212, 170, 0.2);
+        }
+
+        .service-card h3 {
+            color: #00d4aa;
+            margin-bottom: 15px;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact a {
+            color: #00d4aa;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact a:hover {
+            text-decoration: underline;
+        }
+
+        @media (min-width: 768px) {
+            .services {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .hero h1 {
+                font-size: 5rem;
+            }
+            
+            .hero p {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
 </head>
 <body>
-    <section id="hero">
-        <div class="hero-content">
+    <section class="hero">
+        <div class="container">
             <h1>Nosi</h1>
             <p>Self-hosted AI for everyone</p>
-            <button class="cta-button">Learn More</button>
+            <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
 
-    <section id="about">
+    <section id="about" class="about">
         <div class="container">
             <h2>About</h2>
-            <p>Nosi AI Lab is a research environment dedicated to exploring and developing local Large Language Models. We believe in democratizing AI by making powerful machine learning capabilities accessible through self-hosted solutions.</p>
-            <p>Our work focuses on creating efficient, privacy-preserving AI systems that can run on personal hardware, enabling users to harness the power of artificial intelligence without compromising their data.</p>
-            <p>By developing tools and frameworks for local AI inference, we're paving the way for a more decentralized and user-controlled artificial intelligence ecosystem.</p>
+            <p>Nosi AI Lab is a research environment dedicated to exploring and advancing local language models. We focus on making powerful AI technology accessible through self-hosted solutions that prioritize privacy and control.</p>
+            <p>Our work centers on developing inference systems, intelligent agents, and practical tools that can run efficiently on personal hardware without compromising on performance.</p>
         </div>
     </section>
 
-    <section id="services">
+    <section class="services">
         <div class="container">
             <h2>Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Inference</h3>
-                    <p>Run large language models locally with optimized inference engines</p>
+                    <p>Running large language models locally with optimized performance</p>
                 </div>
                 <div class="service-card">
                     <h3>Agents</h3>
-                    <p>Develop and deploy autonomous AI agents for various tasks</p>
+                    <p>Developing autonomous AI agents for various applications</p>
                 </div>
                 <div class="service-card">
                     <h3>Tools</h3>
-                    <p>Build custom AI-powered tools and applications</p>
+                    <p>Creating practical software tools for AI model development</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <section class="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Get in touch with our team</p>
-            <a href="mailto:hello@nosi.example" class="email-link">hello@nosi.example</a>
+            <p><a href="mailto:hello@nosi.example">hello@nosi.example</a></p>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 Nosi AI Lab. All rights reserved.</p>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
 </body>
 </html>
