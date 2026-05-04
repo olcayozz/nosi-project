@@ -1,29 +1,34 @@
 # Components
 
-1. **HTML Structure** - Single HTML file containing all sections (Hero, About, Services, Contact)
-2. **CSS Styles** - Single CSS file for styling with dark theme and responsive layout
-3. **JavaScript** - Minimal JS for interactive elements (if needed)
-4. **Docker Configuration** - Dockerfile using nginx:alpine base image
+## Page Structure
+- Hero Section: Contains logo text "Nosi", tagline "Self-hosted AI for everyone", and "Learn More" button
+- About Section: Describes lab research for local LLMs (2-3 sentences)
+- Services Section: Three cards with headings and one-line descriptions for Inference, Agents, and Tools
+- Contact Section: Simple email contact with mailto: link
 
-# Tech Stack
+## Tech Stack
+- HTML5 for structure and semantic markup
+- CSS3 for styling and responsive design
+- JavaScript for minimal interactivity (if needed)
+- No frameworks, npm, or build tools
+- Pure vanilla JavaScript for any dynamic behavior
 
-- **Frontend**: Plain HTML, CSS, JavaScript (no frameworks)
-- **Build Process**: None - static files only
-- **Deployment**: Docker container with nginx:alpine
+## File Structure
+The following files will be created by the worker:
+- index.html
+- style.css
+- Dockerfile
+- nginx.conf (for nginx configuration)
+- README.md (for deployment instructions)
 
-# File Structure
+## Deployment
+Docker-based deployment using nginx:alpine image
+- Container listens on port 8080
+- Nginx serves content from /usr/share/nginx/html
+- Dockerfile copies all necessary files to container
+- Nginx configuration file includes health check endpoint
 
-The following files will be created:
-- `index.html` - Main landing page
-- `style.css` - Styling for the landing page
-- `Dockerfile` - Container configuration
-- `nginx.conf` - Nginx configuration (if needed)
-
-# Deployment
-
-The application will be deployed in a Docker container:
-- Base image: `nginx:alpine`
-- Port: 8080
-- Files copied to: `/usr/share/nginx/html/`
-- No build steps required
-- Static file serving only
+## Relative Paths
+All internal links and assets use relative paths:
+- CSS file: ./style.css
+- All content in root directory of web server
