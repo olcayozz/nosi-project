@@ -1,11 +1,11 @@
 # Product Requirements Document (PRD)
-## Nosi Landing Page
+## Nosi Landing Page - Simplified Version
 
 ### Project Overview
-Nosi is a landing page for an IT company that works with local LLMs to create agentic systems. The company provides services through a Telegram-based agent team (CEO, Architect, PM, Worker, QA) that develops custom software solutions for clients.
+Nosi is a landing page for an IT company that works with local LLMs to create agentic systems. This simplified version focuses on providing a clean, responsive landing page that effectively communicates the company's value proposition with a dark theme.
 
 ### Objective
-Create a modern, responsive landing page that showcases the company's services and capabilities while effectively communicating their approach to software development using local LLMs and agent teams.
+Create a modern, responsive landing page with a dark theme that clearly communicates the company's approach to software development using local LLMs and agent teams. The page will include essential sections to showcase services and enable contact.
 
 ### Features and Requirements
 
@@ -13,34 +13,26 @@ Create a modern, responsive landing page that showcases the company's services a
 1. **Hero Section**
    - Company name and tagline
    - Introduction to the agentic development approach
-   - Clear call-to-action buttons
+   - Clear call-to-action button
 
-2. **Agent Flow Visualization**
-   - Visual representation of the agent team workflow
-   - Step-by-step visualization of the development process
+2. **About Section** 
+   - 2-3 sentences explaining the company's approach
+   - Focus on local LLMs and agent team methodology
 
-3. **Agent Team Cards**
-   - 5 agent cards (CEO, Architect, PM, Worker, QA)
-   - Each card includes role description and responsibilities
-   - Professional styling with appropriate icons
+3. **Services Section**
+   - 3 service cards describing core offerings
+   - Visual representation with icons
+   - Clear descriptions
 
-4. **Services Section**
-   - 4 service cards describing:
-     - Custom agent team setup
-     - Vibe-coded application development
-     - MCP tool integration
-     - Self-hosted LLM infrastructure
+4. **Contact Section**
+   - Contact information with mailto link
+   - Simple contact form (optional)
 
-5. **Technology Stack**
-   - Section showing technology used in development
-   - Emphasis on local LLM technologies
-
-6. **Telegram Integration**
-   - Clear description of the Telegram-based communication process
-
-7. **Responsive Design**
-   - Mobile-first approach that works across all devices
-   - Modern dark theme with appropriate color scheme
+#### Style Requirements
+- Dark theme throughout the page
+- Plain HTML/CSS/JS only (no frameworks)
+- Responsive design for all devices
+- Modern, clean aesthetic
 
 ### Technical Requirements
 - **Stack**: Plain HTML + CSS + JavaScript (no frameworks, no npm)
@@ -51,15 +43,21 @@ Create a modern, responsive landing page that showcases the company's services a
 
 ### User Experience Goals
 1. Clear communication of the company's unique value proposition
-2. Visual demonstration of the agent-based development process
+2. Visual demonstration of the agent-based development approach
 3. Easy navigation to different sections
 4. Professional yet approachable tone
 5. Strong call-to-action for engagement
 
 ### Acceptance Criteria
-- All sections implemented as per design
+- All sections implemented as per requirements
 - Fully responsive on all device sizes
 - No external dependencies or frameworks
 - All HTML/CSS/JS files work with relative paths
 - Page loads and functions correctly in all modern browsers
 - Code follows clean, maintainable practices
+
+### Implementation Notes
+- The page should be a single static HTML file with embedded CSS and JS for minimal complexity
+- Use modern CSS features but keep compatibility with older browsers
+- Ensure accessibility standards are met
+- Content should be in Turkish for local audience
