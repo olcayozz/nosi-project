@@ -1,57 +1,54 @@
-# Product Requirements Document: Nosi AI Lab Landing Page
+# Product Requirements Document: Nosi AI Lab Landing Site
 
 ## Problem Statement
 
-Nosi AI Lab needs a professional, visually appealing single-page landing site to communicate their mission and services to potential users and collaborators. The site should clearly convey that they are a research environment focused on local LLMs, while providing clear sections about their offerings and contact information. The landing page must be responsive and follow a specific dark theme design.
+Nosi AI Lab needs a professional, modern, and responsive single-page website to showcase their AI research and innovations. The current lack of a dedicated landing site limits their ability to effectively communicate their mission, research areas, and achievements to the public and potential collaborators. The website should serve as a central hub that presents their work clearly and attractively.
 
 ## User Stories
 
-1. As a visitor, I want to see a clear hero section that introduces Nosi AI Lab and its core value proposition
-2. As a visitor, I want to understand what Nosi AI Lab does and their research focus on local LLMs
-3. As a visitor, I want to quickly see the three main services they offer
-4. As a visitor, I want a clear way to contact them via email
-5. As a visitor, I want the site to look professional with a consistent dark theme on all devices
+1. As a visitor, I want to see a visually appealing homepage that clearly communicates Nosi AI Lab's mission and values.
+2. As a researcher, I want to easily navigate to specific research areas and team member profiles.
+3. As a potential collaborator, I want to find contact information and opportunities for partnership.
+4. As a general user, I want the website to be responsive and work well on all device sizes.
+5. As a content manager, I want the website to be easy to update and maintain with plain HTML/CSS/JS.
 
 ## Functional Requirements
 
-1. **Hero Section**:
-   - Display "Nosi" as a heading
-   - Include tagline "Self-hosted AI for everyone"
-   - Add "Learn More" CTA button that scrolls to main content
+### Core Sections
+- Hero section with compelling headline and call-to-action
+- About section explaining the lab's mission and values
+- Research areas section displaying key focus areas with descriptions
+- Team section showcasing members with roles and bios
+- Publications section highlighting recent work
+- Contact section with form and information
+- Footer with legal and navigation links
 
-2. **About Section**:
-   - Two to three sentences describing Nosi AI Lab as a research environment for local LLMs
-   - Must be responsive and readable on all devices
+### Technical Requirements
+- Single-page application with smooth scrolling navigation
+- Responsive design for mobile, tablet, and desktop
+- Plain HTML/CSS/JS with no frameworks
+- Optimized for performance and fast loading
+- Cross-browser compatibility
+- Semantic HTML structure
+- Accessible markup
+- Mobile-first design approach
 
-3. **Services Section**:
-   - Three cards: Inference, Agents, Tools
-   - Each card should have a one-line description
-   - Responsive design that shows single column on mobile, three columns on desktop
-
-4. **Contact Section**:
-   - Include email contact "hello@nosi.example" using mailto link
-   - Must be clearly visible and accessible
-
-5. **Design Requirements**:
-   - Dark theme with #0a0a0a background
-   - Text color #e0e0e0
-   - Accent color #00d4aa
-   - Fully responsive layout
-   - Plain HTML/CSS/JS only (no frameworks)
-
-6. **Technical Requirements**:
-   - Single HTML file with embedded CSS/JS
-   - Docker deployment with nginx:alpine
-   - Server running on port 8080
+### Visual Requirements
+- Professional color scheme reflecting AI/technology
+- Clean, modern typography
+- Consistent spacing and visual hierarchy
+- Responsive image handling
+- Interactive elements with hover/focus states
 
 ## Acceptance Criteria
 
-1. The page loads correctly in modern browsers
-2. All sections are clearly visible and properly spaced
-3. The dark theme is consistently applied across the entire site
-4. The accent color is used appropriately for CTAs and highlights
-5. Mobile responsiveness is working correctly (single column layout)
-6. Desktop layout shows three-column services section
-7. All links work as expected (including mailto: link)
-8. The page meets accessibility standards for text contrast
-9. The Docker deployment works correctly with nginx:alpine
+1. The landing site loads within 3 seconds on a standard connection
+2. All navigation links work correctly with smooth scrolling
+3. The site is fully responsive across all device sizes (mobile, tablet, desktop)
+4. All HTML is semantic and accessible according to WCAG standards
+5. JavaScript enhances the experience without breaking when disabled
+6. All links open in appropriate contexts (same tab for internal, new tab for external)
+7. No external dependencies or frameworks are used
+8. The site passes basic HTML validation
+9. All interactive elements have proper hover and focus states
+10. Content is clearly organized and easy to scan
