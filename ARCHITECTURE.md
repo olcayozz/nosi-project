@@ -1,5 +1,5 @@
 # Architecture Documentation
-## Nosi Landing Page
+## Nosi Landing Page - Simplified Version
 
 ### System Overview
 This landing page is a single-page application built with plain HTML, CSS, and JavaScript without any frameworks or external dependencies. The architecture follows a simple, clean structure designed for performance and maintainability.
@@ -104,3 +104,12 @@ nosi-project/
 - No build step required
 - Easy to update content directly in HTML
 - Minimal maintenance overhead
+
+### Code Organization
+- index.html: Main page structure and content
+- css/style.css: All styling with dark theme
+- js/main.js: All JavaScript functionality including:
+  - Smooth scrolling navigation
+  - Form handling
+  - Header scroll effects
+  - Animation on scroll
