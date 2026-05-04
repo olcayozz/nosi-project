@@ -4,58 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosi AI Lab</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🤖</text></svg>">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
+    <section id="hero">
+        <div class="hero-content">
             <h1>Nosi</h1>
-            <h2>Self-hosted AI for everyone</h2>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <p>Self-hosted AI for everyone</p>
+            <button class="cta-button">Learn More</button>
         </div>
     </section>
 
-    <!-- About Section -->
-    <section class="about">
+    <section id="about">
         <div class="container">
             <h2>About</h2>
-            <p>Nosi AI Lab is dedicated to making powerful AI technologies accessible to everyone. We believe that AI should be open, transparent, and locally hosted to preserve privacy and empower users.</p>
-            <p>Our platform provides tools and services for running and managing AI models locally, ensuring that your data stays private while still allowing you to leverage cutting-edge artificial intelligence.</p>
+            <p>Nosi AI Lab is a research environment dedicated to exploring and developing local Large Language Models. We believe in democratizing AI by making powerful machine learning capabilities accessible through self-hosted solutions.</p>
+            <p>Our work focuses on creating efficient, privacy-preserving AI systems that can run on personal hardware, enabling users to harness the power of artificial intelligence without compromising their data.</p>
+            <p>By developing tools and frameworks for local AI inference, we're paving the way for a more decentralized and user-controlled artificial intelligence ecosystem.</p>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services">
+    <section id="services">
         <div class="container">
             <h2>Services</h2>
-            <div class="cards">
-                <div class="card">
+            <div class="services-grid">
+                <div class="service-card">
                     <h3>Inference</h3>
-                    <p>Run AI models locally with optimized performance for various tasks including text generation, image processing, and more.</p>
+                    <p>Run large language models locally with optimized inference engines</p>
                 </div>
-                <div class="card">
+                <div class="service-card">
                     <h3>Agents</h3>
-                    <p>Deploy autonomous AI agents that can interact with your systems and perform complex tasks without human intervention.</p>
+                    <p>Develop and deploy autonomous AI agents for various tasks</p>
                 </div>
-                <div class="card">
+                <div class="service-card">
                     <h3>Tools</h3>
-                    <p>Access a comprehensive suite of AI development and management tools for your local AI ecosystem.</p>
+                    <p>Build custom AI-powered tools and applications</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section class="contact" id="contact">
+    <section id="contact">
         <div class="container">
             <h2>Contact</h2>
-            <p>Have questions or want to learn more? Reach out to us at:</p>
+            <p>Get in touch with our team</p>
             <a href="mailto:hello@nosi.example" class="email-link">hello@nosi.example</a>
         </div>
     </section>
 
-    <script src="js/main.js"></script>
+    <footer>
+        <div class="container">
+            <p>&copy; 2023 Nosi AI Lab. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>

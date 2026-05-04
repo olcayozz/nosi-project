@@ -28,6 +28,17 @@ body {
   padding: 0 20px;
 }
 
+/* Header */
+header {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  font-size: 2rem;
+  color: var(--accent-color);
+}
+
 /* Hero Section */
 .hero {
   padding: 10rem 0 6rem;
@@ -41,8 +52,8 @@ body {
   color: var(--accent-color);
 }
 
-.hero h2 {
-  font-size: 1.5rem;
+.tagline {
+  font-size: 1.3rem;
   margin-bottom: 2rem;
   color: #b0b0b0;
   max-width: 700px;
@@ -50,7 +61,7 @@ body {
   margin-right: auto;
 }
 
-/* CTA Button */
+/* Buttons */
 .cta-button {
   display: inline-block;
   padding: 0.8rem 2rem;
@@ -115,13 +126,13 @@ section h2::after {
   background-color: #121212;
 }
 
-.cards {
+.services-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 2rem;
 }
 
-.card {
+.service-card {
   background-color: var(--card-bg);
   padding: 2rem;
   border-radius: 10px;
@@ -134,18 +145,18 @@ section h2::after {
   flex-direction: column;
 }
 
-.card:hover {
+.service-card:hover {
   transform: translateY(-10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
 }
 
-.card h3 {
+.service-card h3 {
   margin-bottom: 1rem;
   color: var(--text-color);
   font-size: 1.5rem;
 }
 
-.card p {
+.service-card p {
   color: #b0b0b0;
   flex-grow: 1;
   font-size: 1rem;
@@ -168,15 +179,22 @@ section h2::after {
   color: var(--accent-color);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1.2rem;
 }
 
 .contact a:hover {
   text-decoration: underline;
 }
 
-.email-link {
-  font-size: 1.2rem;
+/* Footer */
+.footer {
+  background-color: #050505;
+  text-align: center;
+  padding: 2rem 0;
+  border-top: 1px solid var(--border-color);
+}
+
+.footer p {
+  color: #a0a0a0;
 }
 
 /* Responsive Styles */
@@ -189,8 +207,8 @@ section h2::after {
     font-size: 2.5rem;
   }
   
-  .hero h2 {
-    font-size: 1.3rem;
+  .hero p {
+    font-size: 1.1rem;
   }
   
   section {
@@ -205,11 +223,11 @@ section h2::after {
     font-size: 1rem;
   }
   
-  .card h3 {
+  .service-card h3 {
     font-size: 1.3rem;
   }
   
-  .cards {
+  .services-grid {
     grid-template-columns: 1fr;
   }
 }
@@ -223,16 +241,12 @@ section h2::after {
     font-size: 2rem;
   }
   
-  .hero h2 {
-    font-size: 1.1rem;
-  }
-  
-  .cta-button {
+  .btn {
     width: 100%;
     max-width: 300px;
   }
   
-  .card {
+  .service-card {
     padding: 1.5rem;
   }
 }
