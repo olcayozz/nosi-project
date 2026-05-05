@@ -3,74 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NOS - Home</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Nosi AI Lab</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">NOS</div>
-            <ul>
-                <li><a href="#hero">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <div class="hero-content">
-            <h1>Welcome to NOS</h1>
-            <p>Your solution to modern problems</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1 class="hero-title">Nosi</h1>
+            <p class="hero-tagline">Self-hosted AI for everyone</p>
+            <a href="#about" class="btn">Learn More</a>
         </div>
     </section>
 
-    <section id="about">
+    <!-- About Section -->
+    <section id="about" class="about">
         <div class="container">
-            <h2>About Us</h2>
-            <p>We are a company dedicated to providing innovative solutions to complex challenges. With years of experience and a team of experts, we strive to deliver excellence in everything we do.</p>
+            <h2>About</h2>
+            <p>Nosi AI Lab is a research environment dedicated to exploring the potential of local large language models. We focus on making advanced AI technology accessible and private by developing tools and platforms that run entirely on users' own hardware.</p>
+            <p>Our work includes optimizing model inference, creating autonomous agents, and building practical tools that empower individuals and organizations to leverage AI without compromising privacy or control.</p>
         </div>
     </section>
 
-    <section id="services">
+    <!-- Services Section -->
+    <section class="services">
         <div class="container">
-            <h2>Our Services</h2>
+            <h2>Services</h2>
             <div class="services-grid">
                 <div class="service-card">
-                    <h3>Service 1</h3>
-                    <p>Description of the first service we offer.</p>
+                    <h3>Inference</h3>
+                    <p>Efficient model execution on local hardware</p>
                 </div>
                 <div class="service-card">
-                    <h3>Service 2</h3>
-                    <p>Description of the second service we offer.</p>
+                    <h3>Agents</h3>
+                    <p>Autonomous AI assistants for personal use</p>
                 </div>
                 <div class="service-card">
-                    <h3>Service 3</h3>
-                    <p>Description of the third service we offer.</p>
+                    <h3>Tools</h3>
+                    <p>Utilities for managing and optimizing local AI systems</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="contact">
+    <!-- Contact Section -->
+    <section class="contact">
         <div class="container">
-            <h2>Contact Us</h2>
-            <form id="contact-form">
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Your Email" required>
-                <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-                <button type="submit">Send Message</button>
-            </form>
+            <h2>Contact</h2>
+            <p><a href="mailto:hello@nosi.example" class="email-link">hello@nosi.example</a></p>
         </div>
     </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2023 NOS. All rights reserved.</p>
-        </div>
-    </footer>
 
     <script src="script.js"></script>
 </body>
