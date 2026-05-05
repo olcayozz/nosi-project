@@ -4,211 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosi AI Lab</title>
-    <style>
-        /* Reset and base styles */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-            background-color: #0a0a0a;
-            color: #e0e0e0;
-            line-height: 1.6;
-        }
-        
-        /* Container */
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 20px;
-        }
-        
-        /* Section spacing */
-        section {
-            padding: 80px 0;
-        }
-        
-        /* Hero section */
-        .hero {
-            text-align: center;
-            padding: 120px 0;
-        }
-        
-        .hero h1 {
-            font-size: 4rem;
-            margin-bottom: 20px;
-            color: #00d4aa;
-        }
-        
-        .hero p {
-            font-size: 1.5rem;
-            margin-bottom: 40px;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background-color: #00d4aa;
-            color: #0a0a0a;
-            text-decoration: none;
-            font-weight: bold;
-            border-radius: 5px;
-            transition: all 0.3s ease;
-        }
-        
-        .btn:hover {
-            background-color: #00b894;
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(0, 212, 170, 0.3);
-        }
-        
-        /* About section */
-        .about {
-            text-align: center;
-        }
-        
-        .about h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-        
-        .about p {
-            font-size: 1.2rem;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 20px;
-        }
-        
-        /* Services section */
-        .services {
-            background-color: #111;
-        }
-        
-        .services h2 {
-            text-align: center;
-            font-size: 2.5rem;
-            margin-bottom: 50px;
-        }
-        
-        .services-grid {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        
-        .service-card {
-            background-color: #1a1a1a;
-            padding: 30px;
-            border-radius: 10px;
-            text-align: center;
-            transition: transform 0.3s ease;
-        }
-        
-        .service-card:hover {
-            transform: translateY(-10px);
-        }
-        
-        .service-card h3 {
-            color: #00d4aa;
-            margin-bottom: 15px;
-            font-size: 1.8rem;
-        }
-        
-        /* Contact section */
-        .contact {
-            text-align: center;
-        }
-        
-        .contact h2 {
-            font-size: 2.5rem;
-            margin-bottom: 30px;
-        }
-        
-        .contact p {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-        }
-        
-        /* Footer */
-        .footer {
-            text-align: center;
-            padding: 30px 0;
-            border-top: 1px solid #333;
-            margin-top: 40px;
-        }
-        
-        /* Responsive design */
-        @media (min-width: 768px) {
-            .services-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-            
-            .hero h1 {
-                font-size: 5rem;
-            }
-            
-            .hero p {
-                font-size: 1.8rem;
-            }
-        }
-        
-        @media (min-width: 1024px) {
-            section {
-                padding: 100px 0;
-            }
-            
-            .hero {
-                padding: 150px 0;
-            }
-            
-            .hero h1 {
-                font-size: 6rem;
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
     <!-- Hero Section -->
     <section class="hero">
-        <div class="container">
-            <h1>Nosi</h1>
-            <p>Self-hosted AI for everyone</p>
-            <a href="#about" class="btn">Learn More</a>
+        <div class="hero-content">
+            <h1 class="company-name">Nosi</h1>
+            <p class="tagline">Self-hosted AI for everyone</p>
+            <button class="cta-button" onclick="scrollToSection('about')">Learn More</button>
         </div>
     </section>
 
     <!-- About Section -->
     <section id="about" class="about">
         <div class="container">
-            <h2>About</h2>
-            <p>Nosi AI Lab is a research environment dedicated to developing and exploring local large language models. We focus on making advanced AI technologies accessible to everyone through self-hosted solutions that prioritize privacy and control.</p>
-            <p>Our work bridges the gap between cutting-edge AI research and practical implementation, enabling individuals and organizations to leverage the power of AI without compromising their data sovereignty.</p>
+            <h2>About Nosi AI Lab</h2>
+            <p>Nosi AI Lab is a research environment dedicated to exploring and developing local Large Language Models (LLMs). Our work focuses on creating AI solutions that can be run entirely on personal devices, ensuring privacy, accessibility, and control over AI technologies.</p>
+            <p>We believe that AI should be accessible to everyone, not just those with access to powerful cloud-based services. Our research environment enables developers, enthusiasts, and organizations to experiment with local AI solutions.</p>
+            <p>Through our work, we aim to advance the field of local AI while maintaining ethical standards and user privacy as core principles.</p>
         </div>
     </section>
 
     <!-- Services Section -->
     <section class="services">
         <div class="container">
-            <h2>Services</h2>
+            <h2>Our Services</h2>
             <div class="services-grid">
                 <div class="service-card">
                     <h3>Inference</h3>
-                    <p>Run local LLMs for natural language processing and generation tasks</p>
+                    <p>Local language model inference with privacy-focused processing</p>
                 </div>
                 <div class="service-card">
                     <h3>Agents</h3>
-                    <p>Develop autonomous AI agents for complex problem solving</p>
+                    <p>Autonomous AI agents designed for personal and research use</p>
                 </div>
                 <div class="service-card">
                     <h3>Tools</h3>
-                    <p>Build practical applications using self-hosted AI technologies</p>
+                    <p>Research and development tools for local AI experimentation</p>
                 </div>
             </div>
         </div>
@@ -217,17 +50,19 @@
     <!-- Contact Section -->
     <section class="contact">
         <div class="container">
-            <h2>Contact</h2>
-            <p>Get in touch with us</p>
-            <a href="mailto:hello@nosi.example" class="btn">Email Us</a>
+            <h2>Contact Us</h2>
+            <p>Have questions or interested in collaborating? Get in touch with us:</p>
+            <a href="mailto:hello@nosi.example" class="email-link">hello@nosi.example</a>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 Nosi AI Lab. All rights reserved.</p>
+            <p>&copy; 2023 Nosi AI Lab. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="./js/script.js"></script>
 </body>
 </html>
