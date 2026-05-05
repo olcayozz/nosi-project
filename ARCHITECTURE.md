@@ -8,19 +8,23 @@ This document outlines the architecture for the Nosi AI Lab landing page. The sy
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Client Browser                            │
 └─────────────────┬───────────────────────────────────────────────┘
-                  │
+                   │
 ┌─────────────────▼───────────────────────────────────────────────┐
 │                    Web Server (nginx)                            │
 │              FROM nginx:alpine                                  │
 │              COPY files to /usr/share/nginx/html/               │
 │              EXPOSE 8080                                         │
 └─────────────────┬───────────────────────────────────────────────┘
-                  │
+                   │
 ┌─────────────────▼───────────────────────────────────────────────┐
 │                     Static Files                                  │
 │  ├── index.html (Main entry point)                              │
-│  ├── css/style.css (Styling)                                    │
-│  └── js/script.js (JavaScript functionality)                    │
+│  ├── css/                                                       │
+│  │   └── style.css (Styling)                                    │
+│  ├── js/                                                        │
+│  │   └── script.js (JavaScript functionality)                   │
+│  ├── Dockerfile                                                │
+│  └── README.md                                                 │
 └─────────────────────────────────────────────────────────────────┘
 ```
 
@@ -103,3 +107,14 @@ The Dockerfile follows nginx:alpine base image:
 - Easy content updates in HTML/CSS
 - Simple deployment process
 - No build pipeline required
+
+## 11. Scalability
+- The current implementation is for a single landing page
+- Can be extended with additional pages if needed
+- No database or backend components to scale
+- Static file serving is inherently scalable
+
+## 12. Monitoring and Logging
+- No specific monitoring requirements
+- Deployment via Docker provides container-level monitoring
+- Browser console errors for client-side debugging
