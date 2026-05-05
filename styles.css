@@ -114,7 +114,7 @@ header {
     color: #00d4aa;
 }
 
-.service-cards {
+.cards {
     display: grid;
     grid-template-columns: 1fr;
     gap: 30px;
@@ -130,6 +130,12 @@ header {
 
 .card p {
     font-size: 1.1rem;
+}
+
+@media (min-width: 768px) {
+    .cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 /* Contact Section */

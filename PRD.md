@@ -32,7 +32,7 @@ This document outlines the requirements for building a single-page landing site 
    - Services: Inference, Agents, Tools
 
 4. **Contact Section** 
-   - Simple email link: mailto:hello@nosi.example
+   - Simple email link: mailto:hello@nosi.ai
 
 #### 4.2 Design Requirements
 - Dark theme with:
@@ -64,18 +64,23 @@ This document outlines the requirements for building a single-page landing site 
 - All content is accessible and readable
 - Page loads without errors
 - Dockerfile builds properly and serves the page on port 8080
+- Contact email link uses correct domain (hello@nosi.ai)
+- All sections follow requirements outlined in this document
 
 ### 6. Success Metrics
 - Page loads successfully with no console errors
 - All sections contain correct content
 - Responsive design works correctly across devices
 - Docker container builds and runs properly
+- Contact email link functions correctly
 
 ### 7. Risks and Mitigations
 - Risk: Incorrect responsive behavior
   - Mitigation: Thorough cross-device testing
 - Risk: Color scheme not matching specified values
   - Mitigation: Use of CSS variables for color consistency
+- Risk: Incorrect contact email domain
+  - Mitigation: Verification of email link content
 
 ### 8. Dependencies
 - None (standalone implementation)

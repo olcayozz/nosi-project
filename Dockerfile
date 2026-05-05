@@ -1,10 +1,15 @@
 FROM nginx:alpine
 
-# Copy all files to the nginx html directory
-COPY . /usr/share/nginx/html/
+# Copy the HTML files to the nginx html directory
+COPY index.html /usr/share/nginx/html/
+COPY styles.css /usr/share/nginx/html/
+COPY script.js /usr/share/nginx/html/
 
 # Expose port 8080
 EXPOSE 8080
+
+# Set the default nginx config to use port 8080
+COPY nginx.conf /etc/nginx/nginx.conf
 
 # Health check
 HEALTHCHECK --interval=30s --timeout=30s --start-period=5s --retries=3 \

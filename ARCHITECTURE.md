@@ -8,14 +8,14 @@ This document outlines the architecture for the Nosi AI Lab landing page. The sy
 ┌─────────────────────────────────────────────────────────────────┐
 │                        Client Browser                            │
 └─────────────────┬───────────────────────────────────────────────┘
-                   │
+                    │
 ┌─────────────────▼───────────────────────────────────────────────┐
 │                    Web Server (nginx)                            │
 │              FROM nginx:alpine                                  │
 │              COPY files to /usr/share/nginx/html/               │
 │              EXPOSE 8080                                         │
 └─────────────────┬───────────────────────────────────────────────┘
-                   │
+                    │
 ┌─────────────────▼───────────────────────────────────────────────┐
 │                     Static Files                                  │
 │  ├── index.html (Main entry point)                              │
@@ -118,3 +118,13 @@ The Dockerfile follows nginx:alpine base image:
 - No specific monitoring requirements
 - Deployment via Docker provides container-level monitoring
 - Browser console errors for client-side debugging
+
+## 13. Implementation Details
+### 13.1 Contact Email Implementation
+The contact section features an email link with the correct domain (`mailto:hello@nosi.ai`) as specified in the updated PRD to match modern AI company practices.
+
+### 13.2 Responsive Design
+- Mobile-first approach implemented
+- Media queries for breakpoints at 768px and 1024px
+- Three-column grid for services on desktop
+- Single-column layout on mobile devices
