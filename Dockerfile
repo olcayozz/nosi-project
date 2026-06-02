@@ -2,8 +2,8 @@ FROM nginx:alpine
 
 # Copy the HTML files to the nginx html directory
 COPY index.html /usr/share/nginx/html/
-COPY styles.css /usr/share/nginx/html/
-COPY script.js /usr/share/nginx/html/
+COPY css/ /usr/share/nginx/html/css/
+COPY js/ /usr/share/nginx/html/js/
 
 # Expose port 8080
 EXPOSE 8080
