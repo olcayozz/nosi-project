@@ -4,53 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nosi AI Lab</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
+    <!-- Header with Navigation -->
     <header>
-        <section class="hero">
-            <h1>Nosi</h1>
-            <p>Self-hosted AI for everyone</p>
-            <a href="#about" class="cta-button">Learn More</a>
-        </section>
-    </header>
-
-    <main>
-        <section id="about" class="about">
-            <h2>About</h2>
-            <p>Nosi AI Lab is a research environment dedicated to exploring the potential of local Large Language Models. We focus on making advanced AI accessible and privacy-focused through self-hosted solutions.</p>
-            <p>Our work enables individuals and organizations to run powerful AI models on their own hardware, maintaining control over their data and computations.</p>
-            <p>We believe that open, local AI technologies are crucial for the future of artificial intelligence as a public good.</p>
-        </section>
-
-        <section id="services" class="services">
-            <h2>Services</h2>
-            <div class="cards">
-                <div class="card">
-                    <h3>Inference</h3>
-                    <p>Run large language models locally with optimized performance.</p>
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <h2>Nosi</h2>
                 </div>
-                <div class="card">
-                    <h3>Agents</h3>
-                    <p>Develop autonomous AI agents tailored to specific tasks and domains.</p>
-                </div>
-                <div class="card">
-                    <h3>Tools</h3>
-                    <p>Build and deploy AI-powered applications using our toolkit.</p>
+                <ul class="nav-menu">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#about" class="nav-link">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+                <div class="nav-toggle" id="mobile-menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
                 </div>
             </div>
-        </section>
+        </nav>
+    </header>
 
-        <section id="contact" class="contact">
-            <h2>Contact</h2>
-            <p><a href="mailto:hello@nosi.ai">hello@nosi.ai</a></p>
-        </section>
-    </main>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <h1>Nosi</h1>
+            <h2>Self-hosted AI for everyone</h2>
+            <a href="#about" class="cta-button">Learn More</a>
+        </div>
+    </section>
 
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="about-container">
+            <h2>About Nosi AI Lab</h2>
+            <p>Nosi AI Lab is a research environment dedicated to advancing the field of local large language models. Our mission is to make AI accessible and empowering for everyone by developing self-hosted AI solutions that prioritize privacy, control, and accessibility.</p>
+            <p>Through our research and development efforts, we aim to create powerful AI capabilities that can be deployed locally, ensuring users maintain full ownership and control over their data and AI experiences.</p>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="services-container">
+            <h2>Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Inference</h3>
+                    <p>Powerful local AI inference capabilities for running large language models without cloud dependencies.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Agents</h3>
+                    <p>Intelligent autonomous agents that can perform complex tasks using local AI models.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Tools</h3>
+                    <p>Custom-developed tools and frameworks to facilitate AI research and deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="contact-container">
+            <h2>Contact Us</h2>
+            <p>Get in touch with us to learn more about our research and development initiatives.</p>
+            <a href="mailto:hello@nosi.ai" class="contact-button">Email Us</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
-        <p>&copy; 2026 Nosi AI Lab. All rights reserved.</p>
+        <div class="footer-container">
+            <p>&copy; 2023 Nosi AI Lab. All rights reserved.</p>
+        </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="./js/script.js"></script>
 </body>
 </html>
